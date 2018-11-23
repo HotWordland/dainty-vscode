@@ -40,6 +40,10 @@ function generateScale(color, override, adjustments) {
       hue = 270 + 90 / 16;
       chromaDivisor = 2;
       break;
+    case "CYAN":
+      hue = 225 + 90 / 32;
+      chromaDivisor = 4;
+      break;
     case "PURPLE":
       hue = 315;
       chromaDivisor = 3;
@@ -124,6 +128,9 @@ function generateColorPalette(configuration) {
         overrides.blueMoreChroma,
         configuration.colors.adjustments
       )
+    ),
+    cyan: handleVariant(
+      generateScale("CYAN", overrides.cyan, configuration.colors.adjustments)
     ),
     purple: handleVariant(
       generateScale(

@@ -2,11 +2,11 @@ const { alpha } = require("./colors");
 
 function getWorkbenchColorCustomizations(colors) {
   const {
-    black,
     blue,
     blueGray,
     blueLessChroma,
     blueMoreChroma,
+    cyan,
     green,
     orange,
     purple,
@@ -18,7 +18,7 @@ function getWorkbenchColorCustomizations(colors) {
     ...{
       "activityBar.background": blueGray[1],
       "activityBar.dropBackground": blueGray[0],
-      "activityBar.foreground": blue[24],
+      "activityBar.foreground": blueLessChroma[24],
       "activityBar.inactiveForeground": blueGray[12],
       "activityBarBadge.foreground": blueGray[39],
       "badge.background": blue[8],
@@ -170,9 +170,9 @@ function getWorkbenchColorCustomizations(colors) {
       "notifications.background": blueGray[1],
       "notifications.border": blueGray[2],
       "panel.background": blueGray[1],
-      "panel.border": blueGray[0],
+      "panel.border": blueGray[2],
       "panel.dropBackground": blueGray[0],
-      "panelTitle.activeBorder": blue[24],
+      "panelTitle.activeBorder": blueLessChroma[24],
       "panelTitle.activeForeground": blueGray[34],
       "panelTitle.inactiveForeground": blueGray[24],
       "peekView.border": blueGray[2],
@@ -237,22 +237,22 @@ function getWorkbenchColorCustomizations(colors) {
       "terminal.ansiBlue": blue[18],
       "terminal.ansiBrightBlack": blueGray[18],
       "terminal.ansiBrightBlue": blue[26],
-      "terminal.ansiBrightCyan": blueLessChroma[26],
+      "terminal.ansiBrightCyan": cyan[26],
       "terminal.ansiBrightGreen": green[26],
       "terminal.ansiBrightMagenta": purple[26],
       "terminal.ansiBrightRed": red[26],
-      "terminal.ansiBrightWhite": blueGray[26],
+      "terminal.ansiBrightWhite": blueGray[39],
       "terminal.ansiBrightYellow": orange[33],
-      "terminal.ansiCyan": blueLessChroma[18],
+      "terminal.ansiCyan": cyan[18],
       "terminal.ansiGreen": green[18],
       "terminal.ansiMagenta": purple[18],
       "terminal.ansiRed": red[18],
-      "terminal.ansiWhite": blueGray[18],
+      "terminal.ansiWhite": blueGray[26],
       "terminal.ansiYellow": orange[26],
       "terminal.background": blueGray[0],
       "terminal.border": blueGray[2],
       "terminal.foreground": blueGray[34],
-      "terminal.selectionBackground": "#ffffff40",
+      "terminal.selectionBackground": alpha(blueLessChroma[20], 0.25),
       "textBlockQuote.background": "#7f7f7f1a",
       "textBlockQuote.border": blueGray[2],
       "textCodeBlock.background": "#0a0a0a66",
@@ -271,8 +271,8 @@ function getWorkbenchColorCustomizations(colors) {
       foreground: blueGray[42]
     },
     ...{
-      "tab.activeBorder": blue[24], // CHECK,
-      "activityBarBadge.background": blueGray[8],
+      "tab.activeBorder": blueLessChroma[24],
+      "activityBarBadge.background": blueMoreChroma[12],
       "editor.lineHighlightBackground": blueGray[2],
       "sideBarSectionHeader.foreground": blueGray[16],
       "sideBar.foreground": blueGray[24],
@@ -667,7 +667,7 @@ function getTokenColorCustomizations(colors) {
         "storage.type.primitive.groovy"
       ],
       settings: {
-        foreground: purple[30]
+        foreground: blueLessChroma[30]
       }
     },
     {
@@ -681,7 +681,7 @@ function getTokenColorCustomizations(colors) {
         "entity.other.inherited-class"
       ],
       settings: {
-        foreground: purple[30]
+        foreground: blueLessChroma[30]
       }
     },
     {
@@ -817,15 +817,19 @@ function getTokenColorCustomizations(colors) {
       }
     },
     {
-      scope: ["punctuation.definition.keyword.css"],
+      scope: [
+        "punctuation.definition.keyword.css",
+        "punctuation.definition.directive.c",
+        "punctuation.definition.heading.markdown"
+      ],
       settings: {
         foreground: blue[26]
       }
     },
     {
-      scope: ["punctuation.definition.directive.c"],
+      scope: ["entity.name.type.class", "entity.name.type.module"],
       settings: {
-        foreground: blue[26]
+        foreground: blueLessChroma[30]
       }
     },
     {
@@ -834,10 +838,17 @@ function getTokenColorCustomizations(colors) {
         "punctuation.definition.comment.js",
         "punctuation.definition.comment.cpp",
         "punctuation.definition.comment.begin.css",
-        "punctuation.definition.comment.end.css"
+        "punctuation.definition.comment.end.css",
+        "punctuation.definition.list.begin.markdown"
       ],
       settings: {
         foreground: blueGray[16]
+      }
+    },
+    {
+      scope: ["markup.heading"],
+      settings: {
+        fontStyle: "normal"
       }
     }
   ]);
