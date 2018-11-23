@@ -22,7 +22,7 @@ The `modify-settings` script sets objects `workbench.colorCustomizations` and `e
 
 To do comparisons with the default theme it can be useful to disable Dainty temporarily:
 
-    npm run modify-settings - --disable
+    npm run modify-settings -- --disable
 
 ## License
 
