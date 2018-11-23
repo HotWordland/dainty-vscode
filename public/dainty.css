@@ -1,0 +1,531 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background-color: #131c28;
+  color: #dddee1;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  line-height: 1.875;
+  margin: 0;
+  font-weight: 300;
+}
+
+@media (max-width: 1023.98px) {
+  body {
+    margin-top: 32px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    margin-top: 64px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  h1 {
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    margin-bottom: 24px;
+  }
+}
+
+h2,
+h3,
+p {
+  margin-bottom: 16px;
+}
+
+ul {
+  margin-bottom: 32px;
+}
+
+h1,
+h2,
+h3,
+th {
+  color: #c3e1ff;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+}
+
+@media (max-width: 1023.98px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  p.small {
+    font-size: 14px;
+  }
+
+  p.big {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  p.small {
+    font-size: 16px;
+  }
+
+  p.big {
+    font-size: 20px;
+  }
+}
+
+a {
+  color: #79b8ff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #96d1ff;
+}
+
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1055.98px) {
+  main {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  section {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    margin-bottom: 64px;
+  }
+}
+
+pre {
+  line-height: 1.375;
+}
+
+code {
+  font-family: "Roboto Mono", SFMono-Regular, Consolas, Liberation Mono, Menlo,
+    Courier, monospace;
+  font-size: 0.875em;
+  color: #eaebed;
+}
+
+a > code,
+button > code {
+  color: inherit;
+}
+
+.table-scroll-container {
+  overflow-x: auto;
+  margin-bottom: 32px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 1024px;
+}
+
+@media (max-width: 1023.98px) {
+  table {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  table {
+    font-size: 16px;
+  }
+}
+
+tr {
+  border-bottom: 0.5px solid #484e59;
+}
+
+th {
+  text-align: left;
+  font-weight: 400;
+}
+
+th,
+td {
+  padding: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul:not(.nav) {
+  padding-left: 16px;
+}
+
+ul.nav {
+  display: flex;
+  padding-left: 0;
+  margin-left: -12px;
+}
+
+@media (max-width: 1023.98px) {
+  ul.nav {
+    flex-direction: column;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  ul.nav {
+    flex-direction: row;
+    font-size: 16px;
+  }
+}
+
+ul:not(.nav) > li:before {
+  display: inline-block;
+  content: "–";
+  width: 18px;
+  margin-left: -18px;
+  color: #6a7079;
+}
+
+ul ul {
+  margin-bottom: 0;
+}
+
+ul.nav li {
+  display: inline-block;
+}
+
+@media (max-width: 1023.98px) {
+  ul.nav li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  ul.nav li:not(:last-child) {
+    margin-right: 32px;
+  }
+}
+
+ul.nav li a {
+  padding: 8px 12px;
+}
+
+ul.nav li.active a {
+  color: #79b8ff;
+}
+
+ul.nav li:not(.active) a {
+  color: #dddee1;
+}
+
+ul.nav li:not(.active) a:hover {
+  color: #96d1ff;
+}
+
+.button-group {
+  display: flex;
+}
+
+@media (max-width: 499.98px) {
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group:not(.center) {
+    align-items: flex-start;
+  }
+
+  .button-group.center {
+    align-items: center;
+  }
+
+  .button-group button:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 500px) {
+  .button-group {
+    flex-direction: row;
+  }
+
+  .button-group.center {
+    justify-content: center;
+  }
+
+  .button-group button:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+button {
+  background-color: transparent;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  transition: transform 0.125s ease, border-color 0.125s ease, color 0.125s ease;
+  padding: 0 24px;
+  cursor: pointer;
+  height: 52px;
+  border-radius: 4px;
+}
+
+button.primary {
+  color: #e4ffff;
+  background-color: #003c71;
+}
+
+button:not(.primary) {
+  background-color: #222a36;
+  color: #dddee1;
+  font-size: 0.875em;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.primary:hover {
+  background-color: #00477d;
+}
+
+button:not(.primary):hover {
+  color: #eaebed;
+  background-color: #2c3440;
+}
+
+button:active {
+  transform: scale(0.985);
+}
+
+@media (max-width: 1023.98px) {
+  form {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  form {
+    font-size: 16px;
+  }
+}
+
+.form-section {
+  margin-bottom: 32px;
+}
+
+.form-section:last-child {
+  margin-bottom: 0;
+}
+
+.form-group {
+  display: flex;
+  border-bottom: 0.5px solid #484e59;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.form-group:first-child {
+  border-top: 0.5px solid #484e59;
+  padding-top: 16px;
+}
+
+.form-group > .input-container {
+  position: relative;
+  flex: 0 0 50%;
+}
+
+.form-group > .input-container > input[type="text"],
+.form-group > .input-container > select {
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  border: 0;
+  padding: 8px 12px;
+  position: absolute;
+  background-color: #1d2532;
+  color: #dddee1;
+  transition: background-color 0.25s ease;
+}
+
+.form-group > .input-container > input[type="text"]:hover,
+.form-group > .input-container > select:hover {
+  background-color: #272f3b;
+  color: #e3e5e7;
+}
+
+.form-group > .input-container > input[type="text"]:focus,
+.form-group > .input-container > select:focus {
+  outline: none;
+  background-color: #323945;
+  color: #eaebed;
+}
+
+.form-group > .input-container > input[type="text"] {
+  top: -3.5px;
+}
+
+.form-group > .input-container > select {
+  cursor: pointer;
+  top: -5px;
+}
+
+.form-group > .ckbx-style-8 {
+  position: relative;
+  top: 4px;
+}
+
+.form-group > label {
+  flex: 0 0 50%;
+}
+
+.modal-container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transition: transform 0.1875s ease;
+  transform: scale(1);
+}
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1024px;
+  background-color: #131c28;
+  overflow: auto;
+  padding: 24px 32px 32px 32px;
+  box-shadow: 1px 3px 25px rgba(0, 0, 0, 0.25);
+  max-height: 100vh;
+}
+
+@media (max-width: 1023.98px) {
+  .modal {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal {
+    width: 1024px;
+  }
+}
+
+.dim {
+  opacity: 0.25;
+}
+
+/* https://github.com/hunzaboy/CSS-Checkbox-Library.git */
+
+div[class^="ckbx-style-"] input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.ckbx-style-8 {
+  font-size: 24px;
+}
+
+.ckbx-style-8 input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.ckbx-style-8 label {
+  width: 2em;
+  height: 1em;
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+
+.ckbx-style-8 label:before {
+  content: "";
+  position: absolute;
+  width: 2em;
+  height: 1em;
+  left: 0.1em;
+  transition: background-color 0.25s ease;
+  background-color: #1d2532;
+  border-radius: 50px;
+}
+
+.ckbx-style-8 label:after {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  border-radius: 50px;
+  left: 0;
+  transition: all 0.25s;
+  background-color: #dddee1;
+  z-index: 3;
+}
+
+.ckbx-style-8 input[type="checkbox"]:checked + label:before {
+  background: #3787f9;
+}
+
+.ckbx-style-8 input[type="checkbox"]:checked + label:after {
+  left: 1.1em;
+}
+
+.ckbx-style-8 input[type="checkbox"]:hover + label:before {
+  background-color: #323945;
+}
+
+.ckbx-style-8 input[type="checkbox"]:checked:hover + label:before {
+  background-color: #5a9fff;
+}
