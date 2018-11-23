@@ -25,6 +25,7 @@ function generateScale(color, override, adjustments) {
       chromaDivisor = 13.125;
 
       if (!lchOverride) {
+        lightnessAdjustment = 2;
         chromaEndAdjustment = -10;
       }
       break;
@@ -59,7 +60,7 @@ function generateScale(color, override, adjustments) {
   }
 
   if (color === "BLUE_GRAY") {
-    chromaAdjustment += adjustments.chroma ? adjustments.chroma : 0;
+    chromaAdjustment += adjustments.chroma ? adjustments.chroma / 3 : 0;
     lightnessAdjustment += adjustments.lightness ? adjustments.lightness : 0;
     chromaStartAdjustment += adjustments.chromaStart
       ? adjustments.chromaStart
