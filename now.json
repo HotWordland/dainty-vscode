@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "alias": "dainty-vscode",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
