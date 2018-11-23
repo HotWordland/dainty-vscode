@@ -225,7 +225,7 @@ function getWorkbenchColorCustomizations(colors) {
       "tab.activeBackground": blueGray[1],
       "tab.activeForeground": blueGray[34],
       "tab.activeModifiedBorder": "#3399cc",
-      "tab.border": blueGray[2],
+      "tab.border": blueGray[1],
       "tab.inactiveBackground": blueGray[1],
       "tab.inactiveForeground": blueGray[24],
       "tab.inactiveModifiedBorder": "#3399cc80",
