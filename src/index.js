@@ -32,8 +32,6 @@ async function getSettings(filename) {
 }
 
 function generateSettings(settings, colors, configuration, disable) {
-  console.log({ settings, colors, configuration, disable });
-
   return {
     ...settings,
     "workbench.colorCustomizations": disable
