@@ -1,0 +1,107 @@
+{
+  "$id": "https://dainty-vscode.now.sh/configuration-schema.json",
+  "type": "object",
+  "title": "Dainty customization",
+  "additionalProperties": false,
+  "properties": {
+    "variant": {
+      "$id": "#/properties/variant",
+      "type": "string",
+      "enum": ["dark", "light"],
+      "title": "Color theme variant",
+      "default": "dark",
+      "additionalProperties": false
+    },
+    "colors": {
+      "$id": "#/properties/colors",
+      "type": "object",
+      "title": "Dainty colors",
+      "default": {},
+      "additionalProperties": false,
+      "properties": {
+        "adjustments": {
+          "$id": "#/properties/colors/properties/adjustments",
+          "type": "object",
+          "title": "Color adjustments",
+          "default": {},
+          "additionalProperties": false,
+          "properties": {
+            "lightness": {
+              "$id": "#/properties/colors/properties/adjustments/properties/lightness",
+              "type": "integer",
+              "title": "Blue-gray scale lightness adjustment",
+              "default": 0
+            },
+            "chroma": {
+              "$id": "#/properties/colors/properties/adjustments/properties/chroma",
+              "type": "integer",
+              "title": "Colors chroma adjustment",
+              "default": 0
+            },
+            "chromaStart": {
+              "$id": "#/properties/colors/properties/adjustments/properties/chromaStart",
+              "type": "integer",
+              "title": "Start of blue gray scale chroma adjustment"
+            },
+            "chromaEnd": {
+              "$id": "#/properties/colors/properties/adjustments/properties/chromaEnd",
+              "type": "integer",
+              "title": "End of blue gray scale chroma adjustment"
+            }
+          }
+        },
+        "overrides": {
+          "$id": "#/properties/colors/properties/overrides",
+          "type": "object",
+          "title": "Dainty color overrides",
+          "default": {},
+          "additionalProperties": false,
+          "properties": {
+            "blueGray": {
+              "$id": "#/properties/colors/properties/overrides/properties/blueGray",
+              "type": "string",
+              "title": "Base color for blue-gray scale",
+              "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+            },
+            "blue": {
+              "$id": "#/properties/colors/properties/overrides/properties/blue",
+              "type": "string",
+              "title": "Base color for blue scale",
+              "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+            },
+            "blueLessChroma": {
+              "$id": "#/properties/colors/properties/overrides/properties/blueLessChroma",
+              "type": "string",
+              "title": "Base color for blue with less chroma scale",
+              "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+            },
+            "blueMoreChroma": {
+              "$id": "#/properties/colors/properties/overrides/properties/blueMoreChroma",
+              "type": "string",
+              "title": "Base color for blue with more chroma scale",
+              "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+            },
+            "purple": {
+              "$id": "#/properties/colors/properties/overrides/properties/purple",
+              "type": "string",
+              "title": "Base color for purple scale",
+              "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+            },
+            "green": {
+              "$id": "#/properties/colors/properties/overrides/properties/green",
+              "type": "string",
+              "title": "Base color for green scale",
+              "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+            },
+            "orange": {
+              "$id": "#/properties/colors/properties/overrides/properties/orange",
+              "type": "string",
+              "title": "Base color for orange scale",
+              "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-const { alpha } = require("./colors");
+const { alpha } = require("dainty-shared").colors;
 
 function getWorkbenchColorCustomizations(colors) {
   const {

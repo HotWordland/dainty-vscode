@@ -1,69 +1,40 @@
 const fs = require("fs");
-const path = require("path");
 const util = require("util");
-const decomment = require("decomment");
-const parseJson = require("parse-json");
-const { generateColorPalette } = require("./colors");
+const path = require("path");
+const parseArgs = require("minimist");
+const { generateColorPalette } = require("dainty-shared").colors;
+const { getConfiguration } = require("dainty-shared").configuration;
+const {
+  appDataPath,
+  createDistDirectory,
+  writeFileLog,
+  backupFile,
+  readFileJson
+} = require("dainty-shared").utils;
 const {
   getWorkbenchColorCustomizations,
   getTokenColorCustomizations
 } = require("./customizations");
-const { appDataPath, writeFileLog } = require("./utils");
 
-const readFile = util.promisify(fs.readFile);
 const exists = util.promisify(fs.exists);
-const mkdir = util.promisify(fs.mkdir);
 
-async function createBackupDirectory() {
-  const target = path.join(__dirname, "../backup");
-
-  if (!(await exists(target))) {
-    await mkdir(target);
-  }
-}
-
-async function readSettings(settingsJson) {
-  if (!(await exists(settingsJson))) {
+async function getSettings(filename) {
+  if (!(await exists(filename))) {
     return {};
   } else {
-    return parseJson(decomment(await readFile(settingsJson, "utf8")));
-  }
-}
-
-async function readSettingsJson(settingsJson) {
-  if (!(await exists(settingsJson))) {
-    return null;
-  } else {
-    return await readFile(settingsJson, "utf8");
-  }
-}
-
-async function backupSettings(settingsJson) {
-  await createBackupDirectory();
-  const data = await readSettingsJson(settingsJson);
-
-  if (data !== null) {
-    const settingsJsonBackup = path.join(
-      __dirname,
-      `../backup/settings_${new Date().getTime()}.json`
-    );
-
-    await writeFileLog(settingsJsonBackup, data);
-  }
-}
-
-async function generateSettings(settingsJson, disable) {
-  const settings = await readSettings(settingsJson);
-
-  const configuration = {
-    colors: {
-      adjustments: {}
+    try {
+      return await readFileJson(filename);
+    } catch (error) {
+      console.error(error);
+      throw new Error("Could not get settings.");
     }
-  };
+  }
+}
 
-  const colors = generateColorPalette(configuration);
+function generateSettings(settings, colors, configuration, disable) {
+  console.log({ settings, colors, configuration, disable });
 
-  const newSettings = {
+  return {
     ...settings,
     "workbench.colorCustomizations": disable
       ? {}
@@ -74,14 +45,41 @@ async function generateSettings(settingsJson, disable) {
           textMateRules: getTokenColorCustomizations(colors, configuration)
         }
   };
-
-  await writeFileLog(settingsJson, JSON.stringify(newSettings, null, 2));
 }
 
 (async () => {
-  let disable = process.argv[2] === "--disable";
+  const argv = parseArgs(process.argv.slice(2));
 
-  const settingsJson = `${await appDataPath()}/Code/User/settings.json`;
-  await backupSettings(settingsJson);
-  await generateSettings(settingsJson, disable);
+  let configuration;
+
+  try {
+    configuration = await getConfiguration(__dirname, argv.preset || argv.p);
+  } catch (error) {
+    console.error(error);
+    return;
+  }
+
+  if (configuration === null) {
+    return;
+  }
+
+  const filename = `${await appDataPath()}/Code/User/settings.json`;
+
+  const settings = generateSettings(
+    await getSettings(filename),
+    generateColorPalette(configuration),
+    configuration,
+    argv.disable || argv.d
+  );
+
+  if (argv.install || argv.i) {
+    await backupFile(__dirname, filename);
+    await writeFileLog(filename, JSON.stringify(settings, null, 2));
+  } else {
+    await createDistDirectory(__dirname);
+    await writeFileLog(
+      path.join(__dirname, "../dist/settings.json"),
+      JSON.stringify(settings, null, 2)
+    );
+  }
 })();

@@ -2,27 +2,26 @@
 
 Dainty for Visual Studio Code is a configurable, refined, and balanced color theme using carefully selected colors within the CIELAB color space. It is designed to maximize readability and reduce eye strain.
 
-_This is a preview version. More information will follow soon._
+_This is a preview version. More information will come soon._
 
 ## Setup
 
+    git clone https://github.com/alexanderte/dainty-shared.git
     git clone https://github.com/alexanderte/dainty-vscode.git
     cd dainty-vscode
     npm install
 
-## Modify `settings.json`
+## Build and install
 
-    npm run modify-settings
+    npm run build -- -i
 
-_Any previous customizations within these objects, and any comments in `settings.json` will be removed. However, the original file is backed up to a `backup` directory._
+The `build` script, when run with `-i` or `--install` sets objects `workbench.colorCustomizations` and `editor.tokenColorCustomizations` in your `settings.json` to Dainty. This is the workflow used for development, and it is currently the only way to set the theme.
 
-The `modify-settings` script sets objects `workbench.colorCustomizations` and `editor.tokenColorCustomizations` in your `settings.json` to Dainty. This is the workflow used for development, and it is currently the only way to set the theme.
+## Disable Dainty
 
-### Temporarily disable Dainty
+    npm run build -- -i -d
 
-To do comparisons with the default theme it can be useful to disable Dainty temporarily:
-
-    npm run modify-settings -- --disable
+The `build` script when run with `-d` or `--disable` in addition to `-i` or `--install` sets objects `workbench.colorCustomizations` and `editor.tokenColorCustomizations` in your `settings.json` to empty objects. This enables doing comparisons with the default theme.
 
 ## License
 
