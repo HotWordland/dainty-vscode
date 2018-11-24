@@ -1,6 +1,6 @@
 # Dainty for Visual Studio Code
 
-Dainty for Visual Studio Code is a configurable, refined, and balanced color theme using carefully selected colors within the CIELAB color space. It is designed to maximize readability and reduce eye strain.
+Dainty is a configurable, refined, and balanced color theme using carefully selected colors within the CIELAB color space. It is designed to maximize readability and reduce eye strain.
 
 _This is a preview version. More information will come soon._
 
@@ -25,6 +25,10 @@ The `build` script, when run with `-i` or `--install` sets objects `workbench.co
     npm run build -- -i -d
 
 The `build` script when run with `-d` or `--disable` in addition to `-i` or `--install` sets objects `workbench.colorCustomizations` and `editor.tokenColorCustomizations` in your `settings.json` to empty objects. This enables doing comparisons with the default theme.
+
+## Configuration
+
+Dainty for Visual Studio Code can be configured by editing `configuration.json`. See [Configuration among applications](https://github.com/alexanderte/dainty-shared/blob/master/configuration-shared.md) for more details.
 
 ## License
 
