@@ -18,7 +18,7 @@ function getWorkbenchColorCustomizations(colors) {
     ...{
       "activityBar.background": blueGray[1],
       "activityBar.dropBackground": blueGray[0],
-      "activityBar.foreground": blueLessChroma[24],
+      "activityBar.foreground": blue[24],
       "activityBar.inactiveForeground": blueGray[12],
       "activityBarBadge.foreground": blueGray[39],
       "badge.background": blue[8],
@@ -67,7 +67,7 @@ function getWorkbenchColorCustomizations(colors) {
       "editor.wordHighlightStrongBackground": alpha(blueLessChroma[20], 0.125),
       "editorActiveLineNumber.foreground": blueGray[20],
       "editorBracketMatch.background": alpha(blueLessChroma[20], 0.125),
-      "editorBracketMatch.border": blueLessChroma[24],
+      "editorBracketMatch.border": blue[24],
       "editorCodeLens.foreground": "#999999",
       "editorCursor.foreground": blueGray[28],
       "editorError.foreground": red[22],
@@ -172,7 +172,7 @@ function getWorkbenchColorCustomizations(colors) {
       "panel.background": blueGray[1],
       "panel.border": blueGray[2],
       "panel.dropBackground": blueGray[0],
-      "panelTitle.activeBorder": blueLessChroma[24],
+      "panelTitle.activeBorder": blue[24],
       "panelTitle.activeForeground": blueGray[34],
       "panelTitle.inactiveForeground": blueGray[24],
       "peekView.border": blueGray[2],
@@ -271,7 +271,7 @@ function getWorkbenchColorCustomizations(colors) {
       foreground: blueGray[42]
     },
     ...{
-      "tab.activeBorder": blueLessChroma[24],
+      "tab.activeBorder": blue[24],
       "activityBarBadge.background": blueMoreChroma[12],
       "editor.lineHighlightBackground": blueGray[2],
       "sideBarSectionHeader.foreground": blueGray[16],
