@@ -15,6 +15,10 @@ function generateScale(color, override, adjustments) {
 
   const lchOverride = override ? culori.lch(override) : null;
 
+  if (!lchOverride) {
+    chromaAdjustment = -2;
+  }
+
   switch (color) {
     case "RED":
       hue = 90 / 4;
@@ -60,14 +64,14 @@ function generateScale(color, override, adjustments) {
   }
 
   if (color === "BLUE_GRAY") {
-    chromaAdjustment += adjustments.chroma ? adjustments.chroma / 3 : 0;
+    chromaAdjustment += adjustments.chroma ? adjustments.chroma : 0;
     lightnessAdjustment += adjustments.lightness ? adjustments.lightness : 0;
     chromaStartAdjustment += adjustments.chromaStart
       ? adjustments.chromaStart
       : 0;
     chromaEndAdjustment += adjustments.chromaEnd ? adjustments.chromaEnd : 0;
   } else {
-    chromaAdjustment += adjustments.chroma ? adjustments.chroma * 2 : 0;
+    chromaAdjustment += adjustments.chroma ? adjustments.chroma : 0;
   }
 
   let scale = [];
@@ -83,7 +87,7 @@ function generateScale(color, override, adjustments) {
         (lightnessAdjustment / 40) * (39 - i),
       c:
         (lchOverride ? lchOverride.c : maximumChroma / chromaDivisor) +
-        chromaAdjustment +
+        (color === "BLUE_GRAY" ? chromaAdjustment / 3 : chromaAdjustment * 3) +
         (chromaStartAdjustment / 40) * (39 - i) +
         (chromaEndAdjustment / 40) * i
     });
