@@ -28,7 +28,7 @@ The `build` script when run with `-d` or `--disable` in addition to `-i` or `--i
 
 ## Configuration
 
-Dainty for Visual Studio Code can be configured by editing `configuration.json`. See [Configuration among applications](https://github.com/alexanderte/dainty-shared/blob/master/configuration-shared.md) for more details.
+Dainty can be configured by editing `configuration.json`. See [Configuration among applications](https://github.com/alexanderte/dainty-shared/blob/master/configuration-shared.md) for more details.
 
 ## License
 
