@@ -8,17 +8,17 @@ _This is a preview version. More information will come soon._
 
     git clone https://github.com/alexanderte/dainty-vscode.git
     cd dainty-vscode
-    npm install
+    yarn install
 
 ## Build and install
 
-    npm run build -- -i
+    yarn build -i
 
 The `build` script, when run with `-i` or `--install` sets objects `workbench.colorCustomizations` and `editor.tokenColorCustomizations` in your `settings.json` to Dainty. This is the workflow used for development, and it is currently the only way to set the theme.
 
 ## Disable Dainty
 
-    npm run build -- -i -d
+    yarn build -i -d
 
 The `build` script when run with `-d` or `--disable` in addition to `-i` or `--install` sets objects `workbench.colorCustomizations` and `editor.tokenColorCustomizations` in your `settings.json` to empty objects. This enables doing comparisons with the default theme.
 
