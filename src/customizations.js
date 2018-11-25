@@ -10,8 +10,7 @@ function getWorkbenchColorCustomizations(colors) {
     green,
     orange,
     purple,
-    red,
-    white
+    red
   } = colors;
 
   return {
@@ -29,7 +28,7 @@ function getWorkbenchColorCustomizations(colors) {
       "breadcrumb.foreground": blueGray[20],
       "breadcrumbPicker.background": blueGray[1],
       "button.background": blue[8],
-      "button.foreground": white,
+      "button.foreground": blueGray[39],
       "button.hoverBackground": blue[10],
       "debugExceptionWidget.background": "#420b0d",
       "debugExceptionWidget.border": blueGray[2],
