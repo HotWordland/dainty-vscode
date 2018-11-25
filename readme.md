@@ -6,10 +6,6 @@ _This is a preview version. More information will come soon._
 
 ## Setup
 
-    git clone https://github.com/alexanderte/dainty-shared.git
-    cd dainty-shared
-    npm install
-    cd ..
     git clone https://github.com/alexanderte/dainty-vscode.git
     cd dainty-vscode
     npm install
