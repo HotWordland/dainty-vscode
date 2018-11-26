@@ -1,0 +1,14 @@
+{
+  "colors": {
+    "adjustments": {
+      "chromaEnd": -5
+    },
+    "overrides": {
+      "blueGray": "#192024",
+      "blue": "#6ab3b2",
+      "green": "#6ab3b2",
+      "orange": "#f2ba54",
+      "purple": "#c098c5"
+    }
+  }
+}
