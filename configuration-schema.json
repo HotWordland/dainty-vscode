@@ -28,24 +28,24 @@
           "properties": {
             "lightness": {
               "$id": "#/properties/colors/properties/adjustments/properties/lightness",
-              "type": "integer",
+              "type": "number",
               "title": "Blue-gray scale lightness adjustment",
               "default": 0
             },
             "chroma": {
               "$id": "#/properties/colors/properties/adjustments/properties/chroma",
-              "type": "integer",
+              "type": "number",
               "title": "Colors chroma adjustment",
               "default": 0
             },
             "chromaStart": {
               "$id": "#/properties/colors/properties/adjustments/properties/chromaStart",
-              "type": "integer",
+              "type": "number",
               "title": "Start of blue gray scale chroma adjustment"
             },
             "chromaEnd": {
               "$id": "#/properties/colors/properties/adjustments/properties/chromaEnd",
-              "type": "integer",
+              "type": "number",
               "title": "End of blue gray scale chroma adjustment"
             }
           }
