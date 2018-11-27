@@ -41,7 +41,7 @@ camel-case@^3.0.0:
     no-case "^2.2.0"
     upper-case "^1.1.1"
 
-chalk@^2.3.0:
+chalk@2.4.1, chalk@^2.3.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.1.tgz#18c49ab16a037b6eb0152cc83e3471338215b66e"
   integrity sha512-ObN6h1v2fTJSmUXoS3nMQ92LbDK9be4TV+6G+omQlGJFdcUX5heKi1LZ1YnRMIgwTLEj3E24bT6tYni50rlCfQ==
@@ -99,14 +99,15 @@ culori@0.7.3:
   resolved "https://registry.yarnpkg.com/culori/-/culori-0.7.3.tgz#bb3fe2a4a8a02e924f16dd5b79b6c443b20508cd"
   integrity sha512-qDNwprGajMlN7cxzbeD6Tw2bcrVIZnuMrXKMOO6dO+PqSz0D+ooPU6zP17GK+YVjWJv0zXlk3YaZVgw3Gkv8aA==
 
-dainty-shared@0.1.0-4a8387e:
-  version "0.1.0-4a8387e"
-  resolved "https://registry.yarnpkg.com/dainty-shared/-/dainty-shared-0.1.0-4a8387e.tgz#bdc605b783e82e1f2af3c67af5c0e318f14b1bfb"
-  integrity sha512-cZyiq9lRdCVGzwgFk0PEVcazKWcobo8DPk6ASupP4XmATACQDRa4rpLVeNlS66Ec5yvT4xQ15NGVENcO5+Dv0w==
+dainty-shared@0.1.0-93a903a:
+  version "0.1.0-93a903a"
+  resolved "https://registry.yarnpkg.com/dainty-shared/-/dainty-shared-0.1.0-93a903a.tgz#637c6e619bf51bf66be66f78cd93d11516e525e3"
+  integrity sha512-CDw+iy1N8cJorcCBMms2mHAci3qlJKX/Lj9xB7B8/CO/vdS7qTZLvtdX+7tyO7rO9pMfzjQ4JlqFSkRYcWpdMQ==
   dependencies:
     ajv "6.5.5"
     appdata-path "1.0.0"
     better-avj-errors "0.4.0-alpha.3"
+    chalk "2.4.1"
     change-case "3.0.2"
     culori "0.7.3"
     decomment "0.9.2"
