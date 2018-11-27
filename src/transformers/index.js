@@ -1,18 +1,15 @@
-const {
-  getWorkbenchColorCustomizations,
-  getTokenColorCustomizations
-} = require("../customizations");
+const { getWorkbenchMappings, getTokenMappings } = require("../mappings");
 
 function transformSettings(settings, colors, configuration, disable) {
   return {
     ...settings,
     "workbench.colorCustomizations": disable
       ? {}
-      : getWorkbenchColorCustomizations(colors, configuration),
+      : getWorkbenchMappings(colors, configuration),
     "editor.tokenColorCustomizations": disable
       ? {}
       : {
-          textMateRules: getTokenColorCustomizations(colors, configuration)
+          textMateRules: getTokenMappings(colors, configuration)
         }
   };
 }

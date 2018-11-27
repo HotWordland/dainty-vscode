@@ -1,6 +1,6 @@
 const { alpha } = require("dainty-shared").colors;
 
-function getWorkbenchColorCustomizations(colors) {
+function getWorkbenchMappings(colors) {
   const {
     blue,
     blueGray,
@@ -281,7 +281,7 @@ function getWorkbenchColorCustomizations(colors) {
   };
 }
 
-function getTokenColorCustomizations(colors) {
+function getTokenMappings(colors) {
   const { blue, blueGray, blueLessChroma, green, orange, purple } = colors;
 
   return [
@@ -855,6 +855,6 @@ function getTokenColorCustomizations(colors) {
 }
 
 module.exports = {
-  getWorkbenchColorCustomizations,
-  getTokenColorCustomizations
+  getWorkbenchMappings,
+  getTokenMappings
 };
