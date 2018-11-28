@@ -1,0 +1,38 @@
+{
+  "customizations": {
+    "tokens": {
+      "comment": {
+        "dark": "blueGray16",
+        "light": "blueGray16"
+      },
+      "string": {
+        "dark": "orange32",
+        "light": "orange32"
+      },
+      "keyword": {
+        "dark": "blue26",
+        "light": "blue26"
+      },
+      "type": {
+        "dark": "purple30",
+        "light": "purple30"
+      },
+      "identifier": {
+        "dark": "blueGray34",
+        "light": "blueGray34"
+      },
+      "number": {
+        "dark": "green35",
+        "light": "green35"
+      },
+      "operator": {
+        "dark": "blueGray30",
+        "light": "blueGray30"
+      },
+      "punctuation": {
+        "dark": "blueGray26",
+        "light": "blueGray26"
+      }
+    }
+  }
+}

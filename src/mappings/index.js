@@ -274,7 +274,7 @@ function getWorkbenchMappings(colors) {
   };
 }
 
-function getTokenMappings(colors) {
+function getTokenMappings(colors, tc) {
   const { blue, blueGray, blueLessChroma, green, orange, purple } = colors;
 
   return [
@@ -305,19 +305,19 @@ function getTokenMappings(colors) {
     {
       scope: "comment",
       settings: {
-        foreground: blueGray[16]
+        foreground: tc("comment")
       }
     },
     {
       scope: "constant.language",
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
       scope: ["constant.numeric"],
       settings: {
-        foreground: green[35]
+        foreground: tc("number")
       }
     },
     {
@@ -329,7 +329,7 @@ function getTokenMappings(colors) {
     {
       scope: "entity.name.tag",
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
@@ -341,7 +341,7 @@ function getTokenMappings(colors) {
     {
       scope: "entity.other.attribute-name",
       settings: {
-        foreground: blueLessChroma[30]
+        foreground: tc("type")
       }
     },
     {
@@ -376,14 +376,14 @@ function getTokenMappings(colors) {
       scope: "markup.bold",
       settings: {
         fontStyle: "bold",
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
       scope: "markup.heading",
       settings: {
         fontStyle: "bold",
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
@@ -395,19 +395,19 @@ function getTokenMappings(colors) {
     {
       scope: "markup.inserted",
       settings: {
-        foreground: green[35]
+        foreground: tc("number")
       }
     },
     {
       scope: "markup.deleted",
       settings: {
-        foreground: orange[33]
+        foreground: tc("string")
       }
     },
     {
       scope: "markup.changed",
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
@@ -425,80 +425,80 @@ function getTokenMappings(colors) {
     {
       scope: "markup.inline.raw",
       settings: {
-        foreground: orange[33]
+        foreground: tc("string")
       }
     },
     {
       name: "brackets of XML/HTML tags",
       scope: "punctuation.definition.tag",
       settings: {
-        foreground: blueGray[24]
+        foreground: tc("punctuation")
       }
     },
     {
       scope: "meta.preprocessor",
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
       scope: "meta.preprocessor.string",
       settings: {
-        foreground: orange[33]
+        foreground: tc("string")
       }
     },
     {
       scope: "meta.preprocessor.numeric",
       settings: {
-        foreground: green[35]
+        foreground: tc("number")
       }
     },
     {
       scope: "meta.structure.dictionary.key.python",
       settings: {
-        foreground: blueGray[34]
+        foreground: tc("identifier")
       }
     },
     {
       scope: "meta.diff.header",
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
       scope: "storage",
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
       scope: "storage.type",
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
       scope: "storage.modifier",
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
       scope: "string",
       settings: {
-        foreground: orange[33]
+        foreground: tc("string")
       }
     },
     {
       scope: "string.tag",
       settings: {
-        foreground: orange[33]
+        foreground: tc("string")
       }
     },
     {
       scope: "string.value",
       settings: {
-        foreground: orange[33]
+        foreground: tc("string")
       }
     },
     {
@@ -515,7 +515,7 @@ function getTokenMappings(colors) {
         "punctuation.section.embedded"
       ],
       settings: {
-        foreground: blueGray[30]
+        foreground: tc("operator")
       }
     },
     {
@@ -535,25 +535,25 @@ function getTokenMappings(colors) {
         "source.coffee.embedded"
       ],
       settings: {
-        foreground: blueGray[34]
+        foreground: tc("identifier")
       }
     },
     {
       scope: "keyword",
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
       scope: "keyword.control",
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
       scope: "keyword.operator",
       settings: {
-        foreground: blueGray[30]
+        foreground: tc("operator")
       }
     },
     {
@@ -566,13 +566,13 @@ function getTokenMappings(colors) {
         "keyword.operator.logical.python"
       ],
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
       scope: "keyword.other.unit",
       settings: {
-        foreground: green[35]
+        foreground: tc("number")
       }
     },
     {
@@ -581,19 +581,19 @@ function getTokenMappings(colors) {
         "punctuation.section.embedded.end.php"
       ],
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
       scope: "support.function.git-rebase",
       settings: {
-        foreground: blueGray[34]
+        foreground: tc("identifier")
       }
     },
     {
       scope: "constant.sha.git-rebase",
       settings: {
-        foreground: green[35]
+        foreground: tc("number")
       }
     },
     {
@@ -611,7 +611,7 @@ function getTokenMappings(colors) {
       name: "this.self",
       scope: "variable.language",
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
@@ -660,7 +660,7 @@ function getTokenMappings(colors) {
         "storage.type.primitive.groovy"
       ],
       settings: {
-        foreground: blueLessChroma[30]
+        foreground: tc("type")
       }
     },
     {
@@ -674,14 +674,14 @@ function getTokenMappings(colors) {
         "entity.other.inherited-class"
       ],
       settings: {
-        foreground: blueLessChroma[30]
+        foreground: tc("type")
       }
     },
     {
       name: "Control flow keywords",
       scope: "keyword.control",
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
@@ -693,14 +693,14 @@ function getTokenMappings(colors) {
         "entity.name.variable"
       ],
       settings: {
-        foreground: blueGray[34]
+        foreground: tc("identifier")
       }
     },
     {
       name: "Object keys, TS grammar specific",
       scope: ["meta.object-literal.key"],
       settings: {
-        foreground: blueGray[34]
+        foreground: tc("identifier")
       }
     },
     {
@@ -715,7 +715,7 @@ function getTokenMappings(colors) {
         "support.constant.color"
       ],
       settings: {
-        foreground: orange[33]
+        foreground: tc("string")
       }
     },
     {
@@ -730,7 +730,7 @@ function getTokenMappings(colors) {
         "support.other.parenthesis.regexp"
       ],
       settings: {
-        foreground: orange[33]
+        foreground: tc("string")
       }
     },
     {
@@ -747,7 +747,7 @@ function getTokenMappings(colors) {
     {
       scope: ["keyword.operator.or.regexp", "keyword.control.anchor.regexp"],
       settings: {
-        foreground: blueGray[34]
+        foreground: tc("identifier")
       }
     },
     {
@@ -759,7 +759,7 @@ function getTokenMappings(colors) {
     {
       scope: "constant.character",
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
@@ -796,7 +796,7 @@ function getTokenMappings(colors) {
     {
       scope: ["meta.brace.round.js", "meta.brace.square.js", "punctuation"],
       settings: {
-        foreground: blueGray[26]
+        foreground: tc("punctuation")
       }
     },
     {
@@ -806,7 +806,7 @@ function getTokenMappings(colors) {
         "storage.type.function.arrow.tsx"
       ],
       settings: {
-        foreground: blueGray[30]
+        foreground: tc("operator")
       }
     },
     {
@@ -816,13 +816,13 @@ function getTokenMappings(colors) {
         "punctuation.definition.heading.markdown"
       ],
       settings: {
-        foreground: blue[26]
+        foreground: tc("keyword")
       }
     },
     {
       scope: ["entity.name.type.class", "entity.name.type.module"],
       settings: {
-        foreground: blueLessChroma[30]
+        foreground: tc("type")
       }
     },
     {
@@ -835,7 +835,7 @@ function getTokenMappings(colors) {
         "punctuation.definition.list.begin.markdown"
       ],
       settings: {
-        foreground: blueGray[16]
+        foreground: tc("comment")
       }
     },
     {

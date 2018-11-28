@@ -8,7 +8,16 @@
       "blue": "#82aaff",
       "green": "#f78c6c", // Deep orange
       "orange": "#ecc48d",
-      "blueLessChroma": "#addb67" // Green
+      "blueLessChroma": "#addb67", // Green
+      "purple": "#c792ea"
+    }
+  },
+  "customizations": {
+    "tokens": {
+      "punctuation": {
+        "dark": "purple24",
+        "light": "purple24"
+      }
     }
   }
 }
