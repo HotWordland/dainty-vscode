@@ -26,11 +26,11 @@
         "light": "green16"
       },
       "operator": {
-        "dark": "blueGray22",
+        "dark": "blueGray30",
         "light": "blueGray22"
       },
       "punctuation": {
-        "dark": "blueGray18",
+        "dark": "blueGray26",
         "light": "blueGray18"
       }
     }
