@@ -7,15 +7,15 @@
       },
       "string": {
         "dark": "orange33",
-        "light": "orange33"
+        "light": "orange18"
       },
       "keyword": {
         "dark": "blue26",
-        "light": "blue26"
+        "light": "blue22"
       },
       "type": {
         "dark": "purple30",
-        "light": "purple30"
+        "light": "purple18"
       },
       "identifier": {
         "dark": "blueGray34",
@@ -23,15 +23,15 @@
       },
       "number": {
         "dark": "green35",
-        "light": "green35"
+        "light": "green16"
       },
       "operator": {
-        "dark": "blueGray30",
-        "light": "blueGray30"
+        "dark": "blueGray22",
+        "light": "blueGray22"
       },
       "punctuation": {
-        "dark": "blueGray26",
-        "light": "blueGray26"
+        "dark": "blueGray18",
+        "light": "blueGray18"
       }
     }
   }
