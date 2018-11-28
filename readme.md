@@ -8,7 +8,7 @@ _This is a preview version. More information will come soon._
 
     git clone https://github.com/alexanderte/dainty-vscode.git
     cd dainty-vscode
-    yarn install
+    yarn
 
 ## Build and install
 
