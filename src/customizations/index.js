@@ -333,7 +333,7 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: "entity.name.tag.css",
       settings: {
-        foreground: purple[30]
+        foreground: getTokenColor("otherType")
       }
     },
     {
@@ -355,7 +355,7 @@ function getTokenCustomizations(colors, getTokenColor) {
         "entity.other.attribute-name.scss"
       ],
       settings: {
-        foreground: purple[30]
+        foreground: getTokenColor("otherType")
       }
     },
     {
@@ -751,7 +751,7 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: "keyword.operator.quantifier.regexp",
       settings: {
-        foreground: purple[30]
+        foreground: getTokenColor("otherType")
       }
     },
     {
