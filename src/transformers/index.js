@@ -2,7 +2,10 @@ const {
   generateColorConstants,
   translateColorConstant
 } = require("dainty-shared").colors;
-const { getWorkbenchMappings, getTokenMappings } = require("../mappings");
+const {
+  getWorkbenchCustomizations,
+  getTokenCustomizations
+} = require("../customizations");
 
 function transformSettings(settings, colors, configuration, disable) {
   const colorConstants = generateColorConstants(colors);
@@ -33,11 +36,11 @@ function transformSettings(settings, colors, configuration, disable) {
     ...settings,
     "workbench.colorCustomizations": disable
       ? {}
-      : getWorkbenchMappings(colors, getTerminalColor),
+      : getWorkbenchCustomizations(colors, getTerminalColor),
     "editor.tokenColorCustomizations": disable
       ? {}
       : {
-          textMateRules: getTokenMappings(colors, getTokenColor)
+          textMateRules: getTokenCustomizations(colors, getTokenColor)
         }
   };
 }
