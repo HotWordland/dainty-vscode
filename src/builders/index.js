@@ -28,17 +28,19 @@ async function getSettings(filename) {
 async function buildSettings(
   dirname,
   configuration,
-  colorPalette,
   install,
-  disable
+  disable,
+  colors,
+  colorConstants
 ) {
   const filename = `${await appDataPath()}/Code/User/settings.json`;
 
   const settings = transformSettings(
     await getSettings(filename),
-    colorPalette,
     configuration,
-    disable
+    disable,
+    colors,
+    colorConstants
   );
 
   if (install) {
