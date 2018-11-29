@@ -620,7 +620,7 @@ function getTokenCustomizations(colors, getTokenColor) {
         "support.constant.handlebars"
       ],
       settings: {
-        foreground: blueLessChroma[34]
+        foreground: getTokenColor("function")
       }
     },
     {
