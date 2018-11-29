@@ -1,6 +1,6 @@
 const { alpha } = require("dainty-shared").colors;
 
-function getWorkbenchMappings(colors) {
+function getWorkbenchMappings(colors, getTerminalColor) {
   const {
     blue,
     blueGray,
@@ -233,25 +233,25 @@ function getWorkbenchMappings(colors) {
     "tab.unfocusedActiveModifiedBorder": "#3399cc80",
     "tab.unfocusedInactiveForeground": "#ffffff40",
     "tab.unfocusedInactiveModifiedBorder": "#3399cc40",
-    "terminal.ansiBlack": blueGray[0],
-    "terminal.ansiBlue": blue[18],
-    "terminal.ansiBrightBlack": blueGray[18],
-    "terminal.ansiBrightBlue": blue[26],
-    "terminal.ansiBrightCyan": cyan[26],
-    "terminal.ansiBrightGreen": green[26],
-    "terminal.ansiBrightMagenta": purple[26],
-    "terminal.ansiBrightRed": red[26],
-    "terminal.ansiBrightWhite": blueGray[39],
-    "terminal.ansiBrightYellow": orange[33],
-    "terminal.ansiCyan": cyan[18],
-    "terminal.ansiGreen": green[18],
-    "terminal.ansiMagenta": purple[18],
-    "terminal.ansiRed": red[18],
-    "terminal.ansiWhite": blueGray[26],
-    "terminal.ansiYellow": orange[26],
-    "terminal.background": blueGray[0],
+    "terminal.ansiBlack": getTerminalColor("black"),
+    "terminal.ansiBlue": getTerminalColor("blue"),
+    "terminal.ansiBrightBlack": getTerminalColor("brightBlack"),
+    "terminal.ansiBrightBlue": getTerminalColor("brightBlue"),
+    "terminal.ansiBrightCyan": getTerminalColor("brightCyan"),
+    "terminal.ansiBrightGreen": getTerminalColor("brightGreen"),
+    "terminal.ansiBrightMagenta": getTerminalColor("brightMagenta"),
+    "terminal.ansiBrightRed": getTerminalColor("brightRed"),
+    "terminal.ansiBrightWhite": getTerminalColor("brightWhite"),
+    "terminal.ansiBrightYellow": getTerminalColor("brightYellow"),
+    "terminal.ansiCyan": getTerminalColor("cyan"),
+    "terminal.ansiGreen": getTerminalColor("green"),
+    "terminal.ansiMagenta": getTerminalColor("magenta"),
+    "terminal.ansiRed": getTerminalColor("red"),
+    "terminal.ansiWhite": getTerminalColor("white"),
+    "terminal.ansiYellow": getTerminalColor("yellow"),
+    "terminal.background": getTerminalColor("background"),
     "terminal.border": blueGray[2],
-    "terminal.foreground": blueGray[34],
+    "terminal.foreground": getTerminalColor("foreground"),
     "terminal.selectionBackground": alpha(blueLessChroma[20], 0.25),
     "textBlockQuote.background": "#7f7f7f1a",
     "textBlockQuote.border": blueGray[2],
@@ -274,7 +274,7 @@ function getWorkbenchMappings(colors) {
   };
 }
 
-function getTokenMappings(colors, tc) {
+function getTokenMappings(colors, getTokenColor) {
   const { blue, blueGray, blueLessChroma, green, orange, purple } = colors;
 
   return [
@@ -305,19 +305,19 @@ function getTokenMappings(colors, tc) {
     {
       scope: "comment",
       settings: {
-        foreground: tc("comment")
+        foreground: getTokenColor("comment")
       }
     },
     {
       scope: "constant.language",
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
       scope: ["constant.numeric"],
       settings: {
-        foreground: tc("number")
+        foreground: getTokenColor("number")
       }
     },
     {
@@ -329,7 +329,7 @@ function getTokenMappings(colors, tc) {
     {
       scope: "entity.name.tag",
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
@@ -341,7 +341,7 @@ function getTokenMappings(colors, tc) {
     {
       scope: "entity.other.attribute-name",
       settings: {
-        foreground: tc("type")
+        foreground: getTokenColor("type")
       }
     },
     {
@@ -376,14 +376,14 @@ function getTokenMappings(colors, tc) {
       scope: "markup.bold",
       settings: {
         fontStyle: "bold",
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
       scope: "markup.heading",
       settings: {
         fontStyle: "bold",
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
@@ -395,19 +395,19 @@ function getTokenMappings(colors, tc) {
     {
       scope: "markup.inserted",
       settings: {
-        foreground: tc("number")
+        foreground: getTokenColor("number")
       }
     },
     {
       scope: "markup.deleted",
       settings: {
-        foreground: tc("string")
+        foreground: getTokenColor("string")
       }
     },
     {
       scope: "markup.changed",
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
@@ -425,80 +425,80 @@ function getTokenMappings(colors, tc) {
     {
       scope: "markup.inline.raw",
       settings: {
-        foreground: tc("string")
+        foreground: getTokenColor("string")
       }
     },
     {
       name: "brackets of XML/HTML tags",
       scope: "punctuation.definition.tag",
       settings: {
-        foreground: tc("punctuation")
+        foreground: getTokenColor("punctuation")
       }
     },
     {
       scope: "meta.preprocessor",
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
       scope: "meta.preprocessor.string",
       settings: {
-        foreground: tc("string")
+        foreground: getTokenColor("string")
       }
     },
     {
       scope: "meta.preprocessor.numeric",
       settings: {
-        foreground: tc("number")
+        foreground: getTokenColor("number")
       }
     },
     {
       scope: "meta.structure.dictionary.key.python",
       settings: {
-        foreground: tc("identifier")
+        foreground: getTokenColor("identifier")
       }
     },
     {
       scope: "meta.diff.header",
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
       scope: "storage",
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
       scope: "storage.type",
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
       scope: "storage.modifier",
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
       scope: "string",
       settings: {
-        foreground: tc("string")
+        foreground: getTokenColor("string")
       }
     },
     {
       scope: "string.tag",
       settings: {
-        foreground: tc("string")
+        foreground: getTokenColor("string")
       }
     },
     {
       scope: "string.value",
       settings: {
-        foreground: tc("string")
+        foreground: getTokenColor("string")
       }
     },
     {
@@ -515,7 +515,7 @@ function getTokenMappings(colors, tc) {
         "punctuation.section.embedded"
       ],
       settings: {
-        foreground: tc("operator")
+        foreground: getTokenColor("operator")
       }
     },
     {
@@ -535,25 +535,25 @@ function getTokenMappings(colors, tc) {
         "source.coffee.embedded"
       ],
       settings: {
-        foreground: tc("identifier")
+        foreground: getTokenColor("identifier")
       }
     },
     {
       scope: "keyword",
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
       scope: "keyword.control",
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
       scope: "keyword.operator",
       settings: {
-        foreground: tc("operator")
+        foreground: getTokenColor("operator")
       }
     },
     {
@@ -566,13 +566,13 @@ function getTokenMappings(colors, tc) {
         "keyword.operator.logical.python"
       ],
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
       scope: "keyword.other.unit",
       settings: {
-        foreground: tc("number")
+        foreground: getTokenColor("number")
       }
     },
     {
@@ -581,19 +581,19 @@ function getTokenMappings(colors, tc) {
         "punctuation.section.embedded.end.php"
       ],
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
       scope: "support.function.git-rebase",
       settings: {
-        foreground: tc("identifier")
+        foreground: getTokenColor("identifier")
       }
     },
     {
       scope: "constant.sha.git-rebase",
       settings: {
-        foreground: tc("number")
+        foreground: getTokenColor("number")
       }
     },
     {
@@ -611,7 +611,7 @@ function getTokenMappings(colors, tc) {
       name: "this.self",
       scope: "variable.language",
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
@@ -660,7 +660,7 @@ function getTokenMappings(colors, tc) {
         "storage.type.primitive.groovy"
       ],
       settings: {
-        foreground: tc("type")
+        foreground: getTokenColor("type")
       }
     },
     {
@@ -674,14 +674,14 @@ function getTokenMappings(colors, tc) {
         "entity.other.inherited-class"
       ],
       settings: {
-        foreground: tc("type")
+        foreground: getTokenColor("type")
       }
     },
     {
       name: "Control flow keywords",
       scope: "keyword.control",
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
@@ -693,14 +693,14 @@ function getTokenMappings(colors, tc) {
         "entity.name.variable"
       ],
       settings: {
-        foreground: tc("identifier")
+        foreground: getTokenColor("identifier")
       }
     },
     {
       name: "Object keys, TS grammar specific",
       scope: ["meta.object-literal.key"],
       settings: {
-        foreground: tc("identifier")
+        foreground: getTokenColor("identifier")
       }
     },
     {
@@ -715,7 +715,7 @@ function getTokenMappings(colors, tc) {
         "support.constant.color"
       ],
       settings: {
-        foreground: tc("string")
+        foreground: getTokenColor("string")
       }
     },
     {
@@ -730,7 +730,7 @@ function getTokenMappings(colors, tc) {
         "support.other.parenthesis.regexp"
       ],
       settings: {
-        foreground: tc("string")
+        foreground: getTokenColor("string")
       }
     },
     {
@@ -747,7 +747,7 @@ function getTokenMappings(colors, tc) {
     {
       scope: ["keyword.operator.or.regexp", "keyword.control.anchor.regexp"],
       settings: {
-        foreground: tc("identifier")
+        foreground: getTokenColor("identifier")
       }
     },
     {
@@ -759,7 +759,7 @@ function getTokenMappings(colors, tc) {
     {
       scope: "constant.character",
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
@@ -796,7 +796,7 @@ function getTokenMappings(colors, tc) {
     {
       scope: ["meta.brace.round.js", "meta.brace.square.js", "punctuation"],
       settings: {
-        foreground: tc("punctuation")
+        foreground: getTokenColor("punctuation")
       }
     },
     {
@@ -806,7 +806,7 @@ function getTokenMappings(colors, tc) {
         "storage.type.function.arrow.tsx"
       ],
       settings: {
-        foreground: tc("operator")
+        foreground: getTokenColor("operator")
       }
     },
     {
@@ -816,13 +816,13 @@ function getTokenMappings(colors, tc) {
         "punctuation.definition.heading.markdown"
       ],
       settings: {
-        foreground: tc("keyword")
+        foreground: getTokenColor("keyword")
       }
     },
     {
       scope: ["entity.name.type.class", "entity.name.type.module"],
       settings: {
-        foreground: tc("type")
+        foreground: getTokenColor("type")
       }
     },
     {
@@ -835,7 +835,7 @@ function getTokenMappings(colors, tc) {
         "punctuation.definition.list.begin.markdown"
       ],
       settings: {
-        foreground: tc("comment")
+        foreground: getTokenColor("comment")
       }
     },
     {

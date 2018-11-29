@@ -1,19 +1,21 @@
-const { generateColorConstants } = require("dainty-shared").colors;
+const {
+  generateColorConstants,
+  translateColorConstant
+} = require("dainty-shared").colors;
 const { getWorkbenchMappings, getTokenMappings } = require("../mappings");
 
 function transformSettings(settings, colors, configuration, disable) {
   const colorConstants = generateColorConstants(colors);
 
-  function translateColorConstant(colorConstant) {
-    if (colorConstant.startsWith("#")) {
-      return colorConstant;
-    } else if (colorConstant.includes("_")) {
-      const [colorConstant_, alpha] = colorConstant.split("_");
+  function getTerminalColor(colorName) {
+    const dark = configuration.variant !== "light";
 
-      return colorConstants[colorConstant_] + alpha;
-    } else {
-      return colorConstants[colorConstant];
-    }
+    const terminalColor = configuration.customizations.terminal[colorName];
+
+    return translateColorConstant(
+      colorConstants,
+      dark ? terminalColor.dark : terminalColor.light
+    );
   }
 
   function getTokenColor(tokenName) {
@@ -21,14 +23,17 @@ function transformSettings(settings, colors, configuration, disable) {
 
     const tokenColor = configuration.customizations.tokens[tokenName];
 
-    return translateColorConstant(dark ? tokenColor.dark : tokenColor.light);
+    return translateColorConstant(
+      colorConstants,
+      dark ? tokenColor.dark : tokenColor.light
+    );
   }
 
   return {
     ...settings,
     "workbench.colorCustomizations": disable
       ? {}
-      : getWorkbenchMappings(colors, configuration),
+      : getWorkbenchMappings(colors, getTerminalColor),
     "editor.tokenColorCustomizations": disable
       ? {}
       : {
