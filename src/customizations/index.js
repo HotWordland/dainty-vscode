@@ -6,9 +6,7 @@ function getWorkbenchCustomizations(colors, getTerminalColor) {
     blueGray,
     blueLessChroma,
     blueMoreChroma,
-    cyan,
     green,
-    orange,
     purple,
     red,
     yellow
@@ -275,7 +273,7 @@ function getWorkbenchCustomizations(colors, getTerminalColor) {
 }
 
 function getTokenCustomizations(colors, getTokenColor) {
-  const { blue, blueGray, blueLessChroma, green, orange, purple } = colors;
+  const { blueLessChroma, orange, purple } = colors;
 
   return [
     {
