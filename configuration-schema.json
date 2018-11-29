@@ -56,8 +56,8 @@
           "default": {},
           "additionalProperties": false,
           "properties": {
-            "blueGray": {
-              "$id": "#/properties/colors/properties/overrides/properties/blueGray",
+            "neutral": {
+              "$id": "#/properties/colors/properties/overrides/properties/neutral",
               "type": "string",
               "title": "Base color for neutral scale",
               "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"

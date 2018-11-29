@@ -4,7 +4,7 @@
       "chromaEnd": -10
     },
     "overrides": {
-      "blueGray": "#011627",
+      "neutral": "#011627",
       "blue": "#82aaff",
       "green": "#f78c6c", // Deep orange
       "orange": "#ecc48d",
