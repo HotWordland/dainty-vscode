@@ -1,28 +1,21 @@
 {
   "$id": "https://dainty-vscode.now.sh/configuration-schema.json",
   "type": "object",
-  "title": "Dainty configuration",
   "additionalProperties": false,
   "properties": {
     "variant": {
       "$id": "#/properties/variant",
       "type": "string",
       "enum": ["dark", "light"],
-      "title": "Color theme variant",
       "default": "dark"
     },
     "colors": {
       "$id": "#/properties/colors",
-      "type": "object",
-      "title": "Dainty colors",
-      "default": {},
-      "additionalProperties": false,
-      "properties": {}
+      "type": "object"
     },
     "customizations": {
       "$id": "#/properties/customizations",
-      "type": "object",
-      "title": "Dainty customizations"
+      "type": "object"
     }
   }
 }
