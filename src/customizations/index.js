@@ -142,9 +142,9 @@ function getWorkbenchCustomizations(colors, getTypeShade, getTerminalColor) {
     "editorRuler.foreground": "#5a5a5a",
     "editorSuggestWidget.background": neutral[getTypeShade(1)],
     "editorSuggestWidget.border": neutral[getTypeShade(2)],
-    "editorSuggestWidget.foreground": "#d4d4d4",
-    "editorSuggestWidget.highlightForeground": "#0097fb",
-    "editorSuggestWidget.selectedBackground": "#062f4a",
+    "editorSuggestWidget.foreground": neutral[getTypeShade(36)],
+    "editorSuggestWidget.highlightForeground": neutral[getTypeShade(36)],
+    "editorSuggestWidget.selectedBackground": neutral[getTypeShade(3)],
     "editorUnnecessaryCode.opacity": "#000000aa",
     "editorWarning.foreground": "#4d9e4d",
     "editorWhitespace.foreground": "#e3e4e229",
@@ -315,7 +315,7 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: ["meta.embedded", "source.groovy.embedded"],
       settings: {
-        foreground: "#D4D4D4"
+        foreground: getTokenColor("identifier")
       }
     },
     {
