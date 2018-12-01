@@ -1,6 +1,7 @@
 const {
   getTerminalColorFunction,
-  getTokenColorFunction
+  getTokenColorFunction,
+  getTypeShadeFunction
 } = require("dainty-shared").colors;
 const {
   getWorkbenchCustomizations,
@@ -20,6 +21,7 @@ function transformSettings(
       ? {}
       : getWorkbenchCustomizations(
           colors,
+          getTypeShadeFunction(configuration),
           getTerminalColorFunction(configuration, colorConstants)
         ),
     "editor.tokenColorCustomizations": disable
