@@ -487,7 +487,7 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: "meta.structure.dictionary.key.python",
       settings: {
-        foreground: getTokenColor("propertyName")
+        foreground: getTokenColor("property")
       }
     },
     {
@@ -731,7 +731,7 @@ function getTokenCustomizations(colors, getTokenColor) {
       name: "Object keys, TS grammar specific",
       scope: ["meta.object-literal.key"],
       settings: {
-        foreground: getTokenColor("propertyName")
+        foreground: getTokenColor("property")
       }
     },
     {
@@ -855,7 +855,7 @@ function getTokenCustomizations(colors, getTokenColor) {
         "support.type.property-name"
       ],
       settings: {
-        foreground: getTokenColor("propertyName")
+        foreground: getTokenColor("property")
       }
     },
     {
@@ -880,7 +880,7 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: ["support.type.property-name.json"],
       settings: {
-        foreground: getTokenColor("propertyName")
+        foreground: getTokenColor("property")
       }
     },
     {
