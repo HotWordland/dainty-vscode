@@ -5,7 +5,7 @@
     "build": "node src/index.js"
   },
   "dependencies": {
-    "dainty-shared": "2.2.0-01f4417",
+    "dainty-shared": "2.2.0-aa1acb8",
     "minimist": "1.2.0"
   }
 }
