@@ -1,23 +1,19 @@
 const { alpha } = require("dainty-shared").colors;
 
-function getWorkbenchCustomizations(colors, getTypeShade, getTerminalColor) {
-  const {
-    blue,
-    neutral,
-    blueLessChroma,
-    blueMoreChroma,
-    green,
-    purple,
-    red,
-    yellow
-  } = colors;
+function getWorkbenchCustomizations(
+  colors,
+  getTypeShade,
+  getAccentColor,
+  getTerminalColor
+) {
+  const { blue, neutral, blueLessChroma, green, purple, red, yellow } = colors;
 
   return {
     "activityBar.background": neutral[getTypeShade(1)],
     "activityBar.dropBackground": neutral[getTypeShade(0)],
-    "activityBar.foreground": blue[getTypeShade(24)],
+    "activityBar.foreground": getAccentColor(1),
     "activityBar.inactiveForeground": neutral[getTypeShade(12)],
-    "activityBarBadge.background": blueMoreChroma[getTypeShade(12)],
+    "activityBarBadge.background": getAccentColor(0),
     "activityBarBadge.foreground": neutral[getTypeShade(39)],
     "badge.background": blue[getTypeShade(8)],
     "badge.foreground": neutral[getTypeShade(39)],
@@ -196,7 +192,7 @@ function getWorkbenchCustomizations(colors, getTypeShade, getTerminalColor) {
     "merge.incomingContentBackground": "#40a6ff33",
     "merge.incomingHeaderBackground": "#40a6ff80",
     "notificationCenterHeader.background": neutral[getTypeShade(1)],
-    "notificationLink.foreground": blueMoreChroma[getTypeShade(36)],
+    "notificationLink.foreground": getAccentColor(1),
     "notifications.background": neutral[getTypeShade(1)],
     "notifications.border": neutral[getTypeShade(2)],
     "panel.background": neutral[getTypeShade(1)],
@@ -253,7 +249,7 @@ function getWorkbenchCustomizations(colors, getTypeShade, getTerminalColor) {
     "statusBarItem.activeBackground": neutral[getTypeShade(6)],
     "statusBarItem.hoverBackground": neutral[getTypeShade(4)],
     "tab.activeBackground": neutral[getTypeShade(1)],
-    "tab.activeBorder": blue[getTypeShade(24)],
+    "tab.activeBorder": getAccentColor(1),
     "tab.activeForeground": neutral[getTypeShade(34)],
     "tab.activeModifiedBorder": "#3399cc",
     "tab.border": neutral[getTypeShade(1)],
@@ -290,8 +286,8 @@ function getWorkbenchCustomizations(colors, getTypeShade, getTerminalColor) {
     "textBlockQuote.background": "#7f7f7f1a",
     "textBlockQuote.border": neutral[getTypeShade(2)],
     "textCodeBlock.background": "#0a0a0a66",
-    "textLink.activeForeground": blueMoreChroma[getTypeShade(38)],
-    "textLink.foreground": blueMoreChroma[getTypeShade(36)],
+    "textLink.activeForeground": getAccentColor(1),
+    "textLink.foreground": getAccentColor(1),
     "textPreformat.foreground": purple[getTypeShade(30)],
     "textSeparator.foreground": "#ffffff2e",
     "titleBar.activeBackground": neutral[getTypeShade(1)],
@@ -315,7 +311,7 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: ["meta.embedded", "source.groovy.embedded"],
       settings: {
-        foreground: getTokenColor("identifier")
+        foreground: getTokenColor("variable")
       }
     },
     {
@@ -345,7 +341,7 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: "constant.language",
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getTokenColor("literal")
       }
     },
     {
@@ -357,7 +353,7 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: "constant.regexp",
       settings: {
-        foreground: "#646695"
+        foreground: getTokenColor("regex")
       }
     },
     {
@@ -375,7 +371,7 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: "entity.other.attribute-name",
       settings: {
-        foreground: getTokenColor("type")
+        foreground: getTokenColor("attributeName")
       }
     },
     {
@@ -391,7 +387,7 @@ function getTokenCustomizations(colors, getTokenColor) {
         "entity.other.attribute-name.scss"
       ],
       settings: {
-        foreground: getTokenColor("otherType")
+        foreground: getTokenColor("attributeName")
       }
     },
     {
@@ -490,7 +486,7 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: "meta.structure.dictionary.key.python",
       settings: {
-        foreground: getTokenColor("identifier")
+        foreground: getTokenColor("propertyName")
       }
     },
     {
@@ -508,13 +504,13 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: "storage.type",
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getTokenColor("storageType")
       }
     },
     {
       scope: "storage.modifier",
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getTokenColor("storageType")
       }
     },
     {
@@ -538,7 +534,7 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: "string.regexp",
       settings: {
-        foreground: "#d16969"
+        foreground: getTokenColor("string")
       }
     },
     {
@@ -569,7 +565,7 @@ function getTokenCustomizations(colors, getTokenColor) {
         "source.coffee.embedded"
       ],
       settings: {
-        foreground: getTokenColor("identifier")
+        foreground: getTokenColor("variable")
       }
     },
     {
@@ -621,7 +617,7 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: "support.function.git-rebase",
       settings: {
-        foreground: getTokenColor("identifier")
+        foreground: getTokenColor("supportFunction")
       }
     },
     {
@@ -727,14 +723,14 @@ function getTokenCustomizations(colors, getTokenColor) {
         "entity.name.variable"
       ],
       settings: {
-        foreground: getTokenColor("identifier")
+        foreground: getTokenColor("variable")
       }
     },
     {
       name: "Object keys, TS grammar specific",
       scope: ["meta.object-literal.key"],
       settings: {
-        foreground: getTokenColor("identifier")
+        foreground: getTokenColor("propertyName")
       }
     },
     {
@@ -764,7 +760,7 @@ function getTokenCustomizations(colors, getTokenColor) {
         "support.other.parenthesis.regexp"
       ],
       settings: {
-        foreground: getTokenColor("string")
+        foreground: getTokenColor("punctuation")
       }
     },
     {
@@ -775,19 +771,19 @@ function getTokenCustomizations(colors, getTokenColor) {
         "constant.character.set.regexp"
       ],
       settings: {
-        foreground: "#d16969"
+        foreground: getTokenColor("regex")
       }
     },
     {
       scope: ["keyword.operator.or.regexp", "keyword.control.anchor.regexp"],
       settings: {
-        foreground: getTokenColor("identifier")
+        foreground: getTokenColor("operator")
       }
     },
     {
       scope: "keyword.operator.quantifier.regexp",
       settings: {
-        foreground: getTokenColor("otherType")
+        foreground: getTokenColor("number")
       }
     },
     {
@@ -799,7 +795,7 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: "constant.character.escape",
       settings: {
-        foreground: orange[26]
+        foreground: getTokenColor("punctuation")
       }
     },
     {
@@ -828,6 +824,53 @@ function getTokenCustomizations(colors, getTokenColor) {
     }
   ].concat([
     {
+      scope: ["variable.parameter"],
+      settings: {
+        foreground: getTokenColor("parameter")
+      }
+    },
+    {
+      scope: ["variable.other.property"],
+      settings: {
+        foreground: getTokenColor("variableProperty")
+      }
+    },
+    {
+      name: "Function declarations",
+      scope: ["support.function", "support.constant.handlebars"],
+      settings: {
+        foreground: getTokenColor("supportFunction")
+      }
+    },
+    {
+      scope: ["support.type", "support.class", "support.constant.math"],
+      settings: {
+        foreground: getTokenColor("supportType")
+      }
+    },
+    {
+      scope: [
+        "support.type.vendored.property-name",
+        "support.type.property-name"
+      ],
+      settings: {
+        foreground: getTokenColor("propertyName")
+      }
+    },
+    {
+      name: "Function declarations",
+      scope: ["support.function"],
+      settings: {
+        foreground: getTokenColor("supportFunction")
+      }
+    },
+    {
+      scope: ["variable.other.constant"],
+      settings: {
+        foreground: getTokenColor("constant")
+      }
+    },
+    {
       scope: ["meta.brace.round.js", "meta.brace.square.js", "punctuation"],
       settings: {
         foreground: getTokenColor("punctuation")
@@ -836,7 +879,7 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: ["support.type.property-name.json"],
       settings: {
-        foreground: getTokenColor("identifier")
+        foreground: getTokenColor("propertyName")
       }
     },
     {

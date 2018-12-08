@@ -1,4 +1,5 @@
 const {
+  getAccentColorFunction,
   getTerminalColorFunction,
   getTokenColorFunction,
   getTypeShadeFunction
@@ -22,6 +23,7 @@ function transformSettings(
       : getWorkbenchCustomizations(
           colors,
           getTypeShadeFunction(configuration),
+          getAccentColorFunction(configuration, colorConstants),
           getTerminalColorFunction(configuration, colorConstants)
         ),
     "editor.tokenColorCustomizations": disable
