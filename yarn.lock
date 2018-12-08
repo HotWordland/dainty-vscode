@@ -99,10 +99,10 @@ culori@0.7.3:
   resolved "https://registry.yarnpkg.com/culori/-/culori-0.7.3.tgz#bb3fe2a4a8a02e924f16dd5b79b6c443b20508cd"
   integrity sha512-qDNwprGajMlN7cxzbeD6Tw2bcrVIZnuMrXKMOO6dO+PqSz0D+ooPU6zP17GK+YVjWJv0zXlk3YaZVgw3Gkv8aA==
 
-dainty-shared@2.2.0-91ae2d8:
-  version "2.2.0-91ae2d8"
-  resolved "https://registry.yarnpkg.com/dainty-shared/-/dainty-shared-2.2.0-91ae2d8.tgz#2751253edd748b34e43102fe103020ff517b4ef1"
-  integrity sha512-zxN50xj5sjDfkSiWyPQK/851pL8Tm8Z1SJ/zJt3zD8LHwKQW6bu85GF1I5C6vnE2AHKX0GahoocSZsiGdB6FRA==
+dainty-shared@2.2.0-0054bd3:
+  version "2.2.0-0054bd3"
+  resolved "https://registry.yarnpkg.com/dainty-shared/-/dainty-shared-2.2.0-0054bd3.tgz#ffbc27a4786a1c0220378f6b4eba17b5088bdae5"
+  integrity sha512-cx3O0rntgnl/DOqYjSdX1dLSm1WUAsrkDO2ZyNPtDdvH9tU4s/0hSEAmzUYvXvxeNkhYKHy9jmQ6c2c8kh3erw==
   dependencies:
     ajv "6.5.5"
     appdata-path "1.0.0"
