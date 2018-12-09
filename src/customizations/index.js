@@ -352,7 +352,7 @@ function getTokenCustomizations(getProperty) {
     {
       scope: "entity.name.tag",
       settings: {
-        foreground: getProperty("token.type")
+        foreground: getProperty("token.tag")
       }
     },
     {
@@ -817,9 +817,21 @@ function getTokenCustomizations(getProperty) {
     }
   ].concat([
     {
+      scope: "string.template",
+      settings: {
+        foreground: getProperty("token.stringTemplate")
+      }
+    },
+    {
+      scope: ["storage.type.function"],
+      settings: {
+        foreground: getProperty("token.storageTypeFunction")
+      }
+    },
+    {
       scope: ["support.class.component.js"],
       settings: {
-        foreground: getProperty("token.type")
+        foreground: getProperty("token.jsxTag")
       }
     },
     {
