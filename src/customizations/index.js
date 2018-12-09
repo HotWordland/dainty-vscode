@@ -1,19 +1,14 @@
 const { alpha } = require("dainty-shared").colors;
 
-function getWorkbenchCustomizations(
-  colors,
-  getTypeShade,
-  getAccentColor,
-  getTerminalColor
-) {
+function getWorkbenchCustomizations(colors, getProperty, getTypeShade) {
   const { blue, neutral, blueLessChroma, green, purple, red, yellow } = colors;
 
   return {
     "activityBar.background": neutral[getTypeShade(1)],
     "activityBar.dropBackground": neutral[getTypeShade(0)],
-    "activityBar.foreground": getAccentColor(1),
+    "activityBar.foreground": getProperty("accent1"),
     "activityBar.inactiveForeground": neutral[getTypeShade(12)],
-    "activityBarBadge.background": getAccentColor(0),
+    "activityBarBadge.background": getProperty("accent0"),
     "activityBarBadge.foreground": neutral[40],
     "badge.background": blue[getTypeShade(8)],
     "badge.foreground": neutral[getTypeShade(40)],
@@ -192,7 +187,7 @@ function getWorkbenchCustomizations(
     "merge.incomingContentBackground": "#40a6ff33",
     "merge.incomingHeaderBackground": "#40a6ff80",
     "notificationCenterHeader.background": neutral[getTypeShade(1)],
-    "notificationLink.foreground": getAccentColor(1),
+    "notificationLink.foreground": getProperty("accent1"),
     "notifications.background": neutral[getTypeShade(1)],
     "notifications.border": neutral[getTypeShade(2)],
     "panel.background": neutral[getTypeShade(1)],
@@ -249,37 +244,36 @@ function getWorkbenchCustomizations(
     "statusBarItem.activeBackground": neutral[getTypeShade(6)],
     "statusBarItem.hoverBackground": neutral[getTypeShade(4)],
     "tab.activeBackground": neutral[getTypeShade(1)],
-    "tab.activeBorder": getAccentColor(1),
+    "tab.activeBorder": getProperty("accent1"),
     "tab.activeForeground": neutral[getTypeShade(34)],
-    "tab.activeModifiedBorder": getAccentColor(2),
+    "tab.activeModifiedBorder": getProperty("accent2"),
     "tab.border": neutral[getTypeShade(1)],
     "tab.inactiveBackground": neutral[getTypeShade(1)],
     "tab.inactiveForeground": neutral[getTypeShade(24)],
-    "tab.inactiveModifiedBorder": getAccentColor(2),
+    "tab.inactiveModifiedBorder": getProperty("accent2"),
     "tab.unfocusedActiveForeground": neutral[getTypeShade(34)],
-    "tab.unfocusedActiveModifiedBorder": getAccentColor(2),
+    "tab.unfocusedActiveModifiedBorder": getProperty("accent2"),
     "tab.unfocusedInactiveForeground": neutral[getTypeShade(24)],
-    "tab.unfocusedInactiveModifiedBorder": getAccentColor(2),
-
-    "terminal.ansiBlack": getTerminalColor("black"),
-    "terminal.ansiBlue": getTerminalColor("blue"),
-    "terminal.ansiBrightBlack": getTerminalColor("brightBlack"),
-    "terminal.ansiBrightBlue": getTerminalColor("brightBlue"),
-    "terminal.ansiBrightCyan": getTerminalColor("brightCyan"),
-    "terminal.ansiBrightGreen": getTerminalColor("brightGreen"),
-    "terminal.ansiBrightMagenta": getTerminalColor("brightMagenta"),
-    "terminal.ansiBrightRed": getTerminalColor("brightRed"),
-    "terminal.ansiBrightWhite": getTerminalColor("brightWhite"),
-    "terminal.ansiBrightYellow": getTerminalColor("brightYellow"),
-    "terminal.ansiCyan": getTerminalColor("cyan"),
-    "terminal.ansiGreen": getTerminalColor("green"),
-    "terminal.ansiMagenta": getTerminalColor("magenta"),
-    "terminal.ansiRed": getTerminalColor("red"),
-    "terminal.ansiWhite": getTerminalColor("white"),
-    "terminal.ansiYellow": getTerminalColor("yellow"),
-    "terminal.background": getTerminalColor("background"),
+    "tab.unfocusedInactiveModifiedBorder": getProperty("accent2"),
+    "terminal.ansiBlack": getProperty("terminal.black"),
+    "terminal.ansiBlue": getProperty("terminal.blue"),
+    "terminal.ansiBrightBlack": getProperty("terminal.brightBlack"),
+    "terminal.ansiBrightBlue": getProperty("terminal.brightBlue"),
+    "terminal.ansiBrightCyan": getProperty("terminal.brightCyan"),
+    "terminal.ansiBrightGreen": getProperty("terminal.brightGreen"),
+    "terminal.ansiBrightMagenta": getProperty("terminal.brightMagenta"),
+    "terminal.ansiBrightRed": getProperty("terminal.brightRed"),
+    "terminal.ansiBrightWhite": getProperty("terminal.brightWhite"),
+    "terminal.ansiBrightYellow": getProperty("terminal.brightYellow"),
+    "terminal.ansiCyan": getProperty("terminal.cyan"),
+    "terminal.ansiGreen": getProperty("terminal.green"),
+    "terminal.ansiMagenta": getProperty("terminal.magenta"),
+    "terminal.ansiRed": getProperty("terminal.red"),
+    "terminal.ansiWhite": getProperty("terminal.white"),
+    "terminal.ansiYellow": getProperty("terminal.yellow"),
+    "terminal.background": getProperty("background"),
     "terminal.border": neutral[getTypeShade(2)],
-    "terminal.foreground": getTerminalColor("foreground"),
+    "terminal.foreground": getProperty("foreground"),
     "terminal.selectionBackground": alpha(
       blueLessChroma[getTypeShade(20)],
       0.25
@@ -287,8 +281,8 @@ function getWorkbenchCustomizations(
     "textBlockQuote.background": "#7f7f7f1a",
     "textBlockQuote.border": neutral[getTypeShade(2)],
     "textCodeBlock.background": "#0a0a0a66",
-    "textLink.activeForeground": getAccentColor(1),
-    "textLink.foreground": getAccentColor(1),
+    "textLink.activeForeground": getProperty("accent1"),
+    "textLink.foreground": getProperty("accent1"),
     "textPreformat.foreground": purple[getTypeShade(30)],
     "textSeparator.foreground": "#ffffff2e",
     "titleBar.activeBackground": neutral[getTypeShade(1)],
@@ -305,14 +299,14 @@ function getWorkbenchCustomizations(
   };
 }
 
-function getTokenCustomizations(colors, getTokenColor) {
+function getTokenCustomizations(colors, getProperty) {
   const { orange } = colors;
 
   return [
     {
       scope: ["meta.embedded", "source.groovy.embedded"],
       settings: {
-        foreground: getTokenColor("variable")
+        foreground: getProperty("token.variable")
       }
     },
     {
@@ -336,43 +330,43 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: "comment",
       settings: {
-        foreground: getTokenColor("comment")
+        foreground: getProperty("token.comment")
       }
     },
     {
       scope: "constant.language",
       settings: {
-        foreground: getTokenColor("literal")
+        foreground: getProperty("token.literal")
       }
     },
     {
       scope: ["constant.numeric"],
       settings: {
-        foreground: getTokenColor("number")
+        foreground: getProperty("token.number")
       }
     },
     {
       scope: "constant.regexp",
       settings: {
-        foreground: getTokenColor("regex")
+        foreground: getProperty("token.regex")
       }
     },
     {
       scope: "entity.name.tag",
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getProperty("token.keyword")
       }
     },
     {
       scope: "entity.name.tag.css",
       settings: {
-        foreground: getTokenColor("otherType")
+        foreground: getProperty("token.otherType")
       }
     },
     {
       scope: "entity.other.attribute-name",
       settings: {
-        foreground: getTokenColor("attributeName")
+        foreground: getProperty("token.attributeName")
       }
     },
     {
@@ -388,7 +382,7 @@ function getTokenCustomizations(colors, getTokenColor) {
         "entity.other.attribute-name.scss"
       ],
       settings: {
-        foreground: getTokenColor("attributeName")
+        foreground: getProperty("token.attributeName")
       }
     },
     {
@@ -407,14 +401,14 @@ function getTokenCustomizations(colors, getTokenColor) {
       scope: "markup.bold",
       settings: {
         fontStyle: "bold",
-        foreground: getTokenColor("keyword")
+        foreground: getProperty("token.keyword")
       }
     },
     {
       scope: "markup.heading",
       settings: {
         fontStyle: "bold",
-        foreground: getTokenColor("keyword")
+        foreground: getProperty("token.keyword")
       }
     },
     {
@@ -426,19 +420,19 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: "markup.inserted",
       settings: {
-        foreground: getTokenColor("number")
+        foreground: getProperty("token.number")
       }
     },
     {
       scope: "markup.deleted",
       settings: {
-        foreground: getTokenColor("string")
+        foreground: getProperty("token.string")
       }
     },
     {
       scope: "markup.changed",
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getProperty("token.keyword")
       }
     },
     {
@@ -456,86 +450,86 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: "markup.inline.raw",
       settings: {
-        foreground: getTokenColor("string")
+        foreground: getProperty("token.string")
       }
     },
     {
       name: "brackets of XML/HTML tags",
       scope: "punctuation.definition.tag",
       settings: {
-        foreground: getTokenColor("punctuation")
+        foreground: getProperty("token.punctuation")
       }
     },
     {
       scope: "meta.preprocessor",
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getProperty("token.keyword")
       }
     },
     {
       scope: "meta.preprocessor.string",
       settings: {
-        foreground: getTokenColor("string")
+        foreground: getProperty("token.string")
       }
     },
     {
       scope: "meta.preprocessor.numeric",
       settings: {
-        foreground: getTokenColor("number")
+        foreground: getProperty("token.number")
       }
     },
     {
       scope: "meta.structure.dictionary.key.python",
       settings: {
-        foreground: getTokenColor("property")
+        foreground: getProperty("token.property")
       }
     },
     {
       scope: "meta.diff.header",
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getProperty("token.keyword")
       }
     },
     {
       scope: "storage",
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getProperty("token.keyword")
       }
     },
     {
       scope: "storage.type",
       settings: {
-        foreground: getTokenColor("storageType")
+        foreground: getProperty("token.storageType")
       }
     },
     {
       scope: "storage.modifier",
       settings: {
-        foreground: getTokenColor("storageType")
+        foreground: getProperty("token.storageType")
       }
     },
     {
       scope: "string",
       settings: {
-        foreground: getTokenColor("string")
+        foreground: getProperty("token.string")
       }
     },
     {
       scope: "string.tag",
       settings: {
-        foreground: getTokenColor("string")
+        foreground: getProperty("token.string")
       }
     },
     {
       scope: "string.value",
       settings: {
-        foreground: getTokenColor("string")
+        foreground: getProperty("token.string")
       }
     },
     {
       scope: "string.regexp",
       settings: {
-        foreground: getTokenColor("string")
+        foreground: getProperty("token.string")
       }
     },
     {
@@ -546,7 +540,7 @@ function getTokenCustomizations(colors, getTokenColor) {
         "punctuation.section.embedded"
       ],
       settings: {
-        foreground: getTokenColor("operator")
+        foreground: getProperty("token.operator")
       }
     },
     {
@@ -566,25 +560,25 @@ function getTokenCustomizations(colors, getTokenColor) {
         "source.coffee.embedded"
       ],
       settings: {
-        foreground: getTokenColor("variable")
+        foreground: getProperty("token.variable")
       }
     },
     {
       scope: "keyword",
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getProperty("token.keyword")
       }
     },
     {
       scope: "keyword.control",
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getProperty("token.keyword")
       }
     },
     {
       scope: "keyword.operator",
       settings: {
-        foreground: getTokenColor("operator")
+        foreground: getProperty("token.operator")
       }
     },
     {
@@ -597,13 +591,13 @@ function getTokenCustomizations(colors, getTokenColor) {
         "keyword.operator.logical.python"
       ],
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getProperty("token.keyword")
       }
     },
     {
       scope: "keyword.other.unit",
       settings: {
-        foreground: getTokenColor("number")
+        foreground: getProperty("token.number")
       }
     },
     {
@@ -612,19 +606,19 @@ function getTokenCustomizations(colors, getTokenColor) {
         "punctuation.section.embedded.end.php"
       ],
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getProperty("token.keyword")
       }
     },
     {
       scope: "support.function.git-rebase",
       settings: {
-        foreground: getTokenColor("supportFunction")
+        foreground: getProperty("token.supportFunction")
       }
     },
     {
       scope: "constant.sha.git-rebase",
       settings: {
-        foreground: getTokenColor("number")
+        foreground: getProperty("token.number")
       }
     },
     {
@@ -642,7 +636,7 @@ function getTokenCustomizations(colors, getTokenColor) {
       name: "this.self",
       scope: "variable.language",
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getProperty("token.keyword")
       }
     },
     {
@@ -653,7 +647,7 @@ function getTokenCustomizations(colors, getTokenColor) {
         "support.constant.handlebars"
       ],
       settings: {
-        foreground: getTokenColor("function")
+        foreground: getProperty("token.function")
       }
     },
     {
@@ -691,7 +685,7 @@ function getTokenCustomizations(colors, getTokenColor) {
         "storage.type.primitive.groovy"
       ],
       settings: {
-        foreground: getTokenColor("type")
+        foreground: getProperty("token.type")
       }
     },
     {
@@ -705,14 +699,14 @@ function getTokenCustomizations(colors, getTokenColor) {
         "entity.other.inherited-class"
       ],
       settings: {
-        foreground: getTokenColor("type")
+        foreground: getProperty("token.type")
       }
     },
     {
       name: "Control flow keywords",
       scope: "keyword.control",
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getProperty("token.keyword")
       }
     },
     {
@@ -724,14 +718,14 @@ function getTokenCustomizations(colors, getTokenColor) {
         "entity.name.variable"
       ],
       settings: {
-        foreground: getTokenColor("variable")
+        foreground: getProperty("token.variable")
       }
     },
     {
       name: "Object keys, TS grammar specific",
       scope: ["meta.object-literal.key"],
       settings: {
-        foreground: getTokenColor("property")
+        foreground: getProperty("token.property")
       }
     },
     {
@@ -746,7 +740,7 @@ function getTokenCustomizations(colors, getTokenColor) {
         "support.constant.color"
       ],
       settings: {
-        foreground: getTokenColor("string")
+        foreground: getProperty("token.string")
       }
     },
     {
@@ -761,7 +755,7 @@ function getTokenCustomizations(colors, getTokenColor) {
         "support.other.parenthesis.regexp"
       ],
       settings: {
-        foreground: getTokenColor("punctuation")
+        foreground: getProperty("token.punctuation")
       }
     },
     {
@@ -772,31 +766,31 @@ function getTokenCustomizations(colors, getTokenColor) {
         "constant.character.set.regexp"
       ],
       settings: {
-        foreground: getTokenColor("regex")
+        foreground: getProperty("token.regex")
       }
     },
     {
       scope: ["keyword.operator.or.regexp", "keyword.control.anchor.regexp"],
       settings: {
-        foreground: getTokenColor("operator")
+        foreground: getProperty("token.operator")
       }
     },
     {
       scope: "keyword.operator.quantifier.regexp",
       settings: {
-        foreground: getTokenColor("number")
+        foreground: getProperty("token.number")
       }
     },
     {
       scope: "constant.character",
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getProperty("token.keyword")
       }
     },
     {
       scope: "constant.character.escape",
       settings: {
-        foreground: getTokenColor("punctuation")
+        foreground: getProperty("token.punctuation")
       }
     },
     {
@@ -827,26 +821,26 @@ function getTokenCustomizations(colors, getTokenColor) {
     {
       scope: ["variable.parameter"],
       settings: {
-        foreground: getTokenColor("parameter")
+        foreground: getProperty("token.parameter")
       }
     },
     {
       scope: ["variable.other.property"],
       settings: {
-        foreground: getTokenColor("variableProperty")
+        foreground: getProperty("token.variableProperty")
       }
     },
     {
       name: "Function declarations",
       scope: ["support.function", "support.constant.handlebars"],
       settings: {
-        foreground: getTokenColor("supportFunction")
+        foreground: getProperty("token.supportFunction")
       }
     },
     {
       scope: ["support.type", "support.class", "support.constant.math"],
       settings: {
-        foreground: getTokenColor("supportType")
+        foreground: getProperty("token.supportType")
       }
     },
     {
@@ -855,32 +849,32 @@ function getTokenCustomizations(colors, getTokenColor) {
         "support.type.property-name"
       ],
       settings: {
-        foreground: getTokenColor("property")
+        foreground: getProperty("token.property")
       }
     },
     {
       name: "Function declarations",
       scope: ["support.function"],
       settings: {
-        foreground: getTokenColor("supportFunction")
+        foreground: getProperty("token.supportFunction")
       }
     },
     {
       scope: ["variable.other.constant"],
       settings: {
-        foreground: getTokenColor("constant")
+        foreground: getProperty("token.constant")
       }
     },
     {
       scope: ["meta.brace.round.js", "meta.brace.square.js", "punctuation"],
       settings: {
-        foreground: getTokenColor("punctuation")
+        foreground: getProperty("token.punctuation")
       }
     },
     {
       scope: ["support.type.property-name.json"],
       settings: {
-        foreground: getTokenColor("property")
+        foreground: getProperty("token.property")
       }
     },
     {
@@ -890,7 +884,7 @@ function getTokenCustomizations(colors, getTokenColor) {
         "storage.type.function.arrow.tsx"
       ],
       settings: {
-        foreground: getTokenColor("operator")
+        foreground: getProperty("token.operator")
       }
     },
     {
@@ -900,13 +894,13 @@ function getTokenCustomizations(colors, getTokenColor) {
         "punctuation.definition.heading.markdown"
       ],
       settings: {
-        foreground: getTokenColor("keyword")
+        foreground: getProperty("token.keyword")
       }
     },
     {
       scope: ["entity.name.type.class", "entity.name.type.module"],
       settings: {
-        foreground: getTokenColor("type")
+        foreground: getProperty("token.type")
       }
     },
     {
@@ -919,7 +913,7 @@ function getTokenCustomizations(colors, getTokenColor) {
         "punctuation.definition.list.begin.markdown"
       ],
       settings: {
-        foreground: getTokenColor("comment")
+        foreground: getProperty("token.comment")
       }
     },
     {

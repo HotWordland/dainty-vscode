@@ -1,7 +1,5 @@
 const {
-  getAccentColorFunction,
-  getTerminalColorFunction,
-  getTokenColorFunction,
+  getPropertyFunction,
   getTypeShadeFunction
 } = require("dainty-shared").colors;
 const {
@@ -22,16 +20,15 @@ function transformSettings(
       ? {}
       : getWorkbenchCustomizations(
           colors,
-          getTypeShadeFunction(configuration),
-          getAccentColorFunction(configuration, colorConstants),
-          getTerminalColorFunction(configuration, colorConstants)
+          getPropertyFunction(configuration, colorConstants),
+          getTypeShadeFunction(configuration)
         ),
     "editor.tokenColorCustomizations": disable
       ? {}
       : {
           textMateRules: getTokenCustomizations(
             colors,
-            getTokenColorFunction(configuration, colorConstants)
+            getPropertyFunction(configuration, colorConstants)
           )
         }
   };
