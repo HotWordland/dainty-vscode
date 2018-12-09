@@ -352,7 +352,7 @@ function getTokenCustomizations(getProperty) {
     {
       scope: "entity.name.tag",
       settings: {
-        foreground: getProperty("token.keyword")
+        foreground: getProperty("token.type")
       }
     },
     {
@@ -816,6 +816,12 @@ function getTokenCustomizations(getProperty) {
       }
     }
   ].concat([
+    {
+      scope: ["support.class.component.js"],
+      settings: {
+        foreground: getProperty("token.type")
+      }
+    },
     {
       scope: ["variable.parameter"],
       settings: {
