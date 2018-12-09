@@ -89,7 +89,7 @@ function getWorkbenchCustomizations(colors, getProperty, getTypeShade) {
     ),
     "editorBracketMatch.border": blue[getTypeShade(24)],
     "editorCodeLens.foreground": "#999999",
-    "editorCursor.foreground": neutral[getTypeShade(28)],
+    "editorCursor.foreground": getProperty("cursor"),
     "editorError.foreground": red[getTypeShade(22)],
     "editorGroup.border": neutral[getTypeShade(2)],
     "editorGroup.dropBackground": neutral[getTypeShade(0)],
@@ -271,9 +271,9 @@ function getWorkbenchCustomizations(colors, getProperty, getTypeShade) {
     "terminal.ansiRed": getProperty("terminal.red"),
     "terminal.ansiWhite": getProperty("terminal.white"),
     "terminal.ansiYellow": getProperty("terminal.yellow"),
-    "terminal.background": getProperty("background"),
+    "terminal.background": neutral[getTypeShade(0)],
     "terminal.border": neutral[getTypeShade(2)],
-    "terminal.foreground": getProperty("foreground"),
+    "terminal.foreground": neutral[getTypeShade(34)],
     "terminal.selectionBackground": alpha(
       blueLessChroma[getTypeShade(20)],
       0.25
@@ -299,9 +299,7 @@ function getWorkbenchCustomizations(colors, getProperty, getTypeShade) {
   };
 }
 
-function getTokenCustomizations(colors, getProperty) {
-  const { orange } = colors;
-
+function getTokenCustomizations(getProperty) {
   return [
     {
       scope: ["meta.embedded", "source.groovy.embedded"],

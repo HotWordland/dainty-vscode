@@ -27,7 +27,6 @@ function transformSettings(
       ? {}
       : {
           textMateRules: getTokenCustomizations(
-            colors,
             getPropertyFunction(configuration, colorConstants)
           )
         }
