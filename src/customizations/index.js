@@ -817,6 +817,12 @@ function getTokenCustomizations(getProperty) {
     }
   ].concat([
     {
+      scope: "string.quoted.double.html",
+      settings: {
+        foreground: getProperty("token.string")
+      }
+    },
+    {
       scope: "string.template",
       settings: {
         foreground: getProperty("token.stringTemplate")
