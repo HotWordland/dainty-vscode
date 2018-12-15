@@ -33,6 +33,11 @@ better-avj-errors@0.4.0-alpha.3:
     jsonpointer "^4.0.1"
     leven "^2.1.0"
 
+bezier-easing@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/bezier-easing/-/bezier-easing-2.1.0.tgz#c04dfe8b926d6ecaca1813d69ff179b7c2025d86"
+  integrity sha1-wE3+i5JtbsrKGBPWn/F5t8ICXYY=
+
 camel-case@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/camel-case/-/camel-case-3.0.0.tgz#ca3c3688a4e9cf3a4cda777dc4dcbc713249cf73"
@@ -99,14 +104,15 @@ culori@0.7.3:
   resolved "https://registry.yarnpkg.com/culori/-/culori-0.7.3.tgz#bb3fe2a4a8a02e924f16dd5b79b6c443b20508cd"
   integrity sha512-qDNwprGajMlN7cxzbeD6Tw2bcrVIZnuMrXKMOO6dO+PqSz0D+ooPU6zP17GK+YVjWJv0zXlk3YaZVgw3Gkv8aA==
 
-dainty-shared@2.1.1-7d8316e:
-  version "2.1.1-7d8316e"
-  resolved "https://registry.yarnpkg.com/dainty-shared/-/dainty-shared-2.1.1-7d8316e.tgz#229bcccd32fe275ad63b7206182847bfacfd6849"
-  integrity sha512-2yKf273NGZbQVjZeMt5v19AEnVMvWLP7/vZr6I6dKnmVATpJ3DFH/7WTkoURWnh5aWImpvpsdRtGP2OMVNe5TQ==
+dainty-shared@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/dainty-shared/-/dainty-shared-3.0.0.tgz#9757836290220cb15521bf9f35b34f73a0636ecb"
+  integrity sha512-ZJnrF1V9U7O3GdeBwjPH2TfTONC/J4N88GqAY+MCBD3GamDAIVwNPfrC1UfqjHMiSKzYn/3ByiQQe6Vpw/GXrA==
   dependencies:
     ajv "6.5.5"
     appdata-path "1.0.0"
     better-avj-errors "0.4.0-alpha.3"
+    bezier-easing "2.1.0"
     chalk "2.4.1"
     change-case "3.0.2"
     culori "0.7.3"
