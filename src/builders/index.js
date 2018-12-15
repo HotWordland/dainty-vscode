@@ -8,7 +8,7 @@ const {
   writeFileLog,
   backupFile,
   readFileJson
-} = require("dainty-shared").utils;
+} = require("dainty-shared/src/utils");
 
 const exists = util.promisify(fs.exists);
 
@@ -25,22 +25,13 @@ async function getSettings(filename) {
   }
 }
 
-async function buildSettings(
-  dirname,
-  configuration,
-  install,
-  disable,
-  colors,
-  colorConstants
-) {
+async function buildSettings(dirname, configuration, install, disable) {
   const filename = `${await appDataPath()}/Code/User/settings.json`;
 
   const settings = transformSettings(
     await getSettings(filename),
     configuration,
-    disable,
-    colors,
-    colorConstants
+    disable
   );
 
   if (install) {

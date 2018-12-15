@@ -1,33 +1,30 @@
 const {
-  getPropertyFunction,
-  getTypeShadeFunction
-} = require("dainty-shared").colors;
+  getColorFunction,
+  getTypeShadeFunction,
+  getTypeValueFunction,
+  getPropertyFunction
+} = require("dainty-shared/src/colors");
 const {
   getWorkbenchCustomizations,
   getTokenCustomizations
 } = require("../customizations");
 
-function transformSettings(
-  settings,
-  configuration,
-  disable,
-  colors,
-  colorConstants
-) {
+function transformSettings(settings, configuration, disable) {
   return {
     ...settings,
     "workbench.colorCustomizations": disable
       ? {}
       : getWorkbenchCustomizations(
-          colors,
-          getPropertyFunction(configuration, colorConstants),
-          getTypeShadeFunction(configuration)
+          getColorFunction(configuration),
+          getPropertyFunction(configuration, getColorFunction(configuration)),
+          getTypeShadeFunction(configuration),
+          getTypeValueFunction(configuration)
         ),
     "editor.tokenColorCustomizations": disable
       ? {}
       : {
           textMateRules: getTokenCustomizations(
-            getPropertyFunction(configuration, colorConstants)
+            getPropertyFunction(configuration, getColorFunction(configuration))
           )
         }
   };
