@@ -295,14 +295,20 @@ function getWorkbenchCustomizations(
     "sideBarSectionHeader.background": getColor("neutral", getTypeShade(1)),
     "sideBarSectionHeader.foreground": getColor("neutral", getTypeShade(6)),
     "sideBarTitle.foreground": getColor("neutral", getTypeShade(6)),
-    "statusBar.background": getColor("neutral", getTypeShade(1)),
-    "statusBar.foreground": getColor("neutral", getTypeShade(10)),
-    "statusBar.debuggingBackground": getColor("orangeMoreChroma", 6),
-    "statusBar.debuggingForeground": getColor("neutral", 16),
-    "statusBar.noFolderBackground": getColor("purpleMoreChroma", 4),
-    "statusBar.noFolderForeground": getColor("neutral", 16),
-    "statusBarItem.activeBackground": getColor("neutral", getTypeShade(2)),
-    "statusBarItem.hoverBackground": getColor("neutral", getTypeShade(2)),
+    "statusBar.background": getColor("neutral", getTypeShade(2)),
+    "statusBar.foreground": getColor("neutral", getTypeShade(11)),
+    "statusBar.debuggingBackground": getColor(
+      "orangeMoreChroma",
+      getTypeShade(6)
+    ),
+    "statusBar.debuggingForeground": getColor("neutral", getTypeShade(11)),
+    "statusBar.noFolderBackground": getColor(
+      "purpleMoreChroma",
+      getTypeShade(4)
+    ),
+    "statusBar.noFolderForeground": getColor("neutral", getTypeShade(11)),
+    // "statusBarItem.activeBackground": getColor("neutral", getTypeShade(2)),
+    // "statusBarItem.hoverBackground": getColor("neutral", getTypeShade(2)),
     "tab.activeBackground": getColor("neutral", getTypeShade(1)),
     "tab.activeBorder": getColor("accent", getTypeShade(11)),
     "tab.activeForeground": getColor("neutral", getTypeShade(14)),
