@@ -10,7 +10,8 @@ const {
 } = require("../customizations");
 
 function transformSettings(settings, configuration, disable) {
-  return {
+  console.log({ type: configuration.type });
+  let newSettings = {
     ...settings,
     "workbench.colorCustomizations": disable
       ? {}
@@ -28,6 +29,14 @@ function transformSettings(settings, configuration, disable) {
           )
         }
   };
+
+  if (configuration.type === "dark" && newSettings["workbench.colorTheme"]) {
+    delete newSettings["workbench.colorTheme"];
+  } else if (configuration.type === "light") {
+    newSettings["workbench.colorTheme"] = "Default Light+";
+  }
+
+  return newSettings;
 }
 
 module.exports = {
