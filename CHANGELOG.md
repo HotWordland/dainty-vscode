@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3 – 2018-12-16
+
+- Use 256×256 pixels icon instead of 128×128
+
 ## 0.1.2 – 2018-12-16
 
 - Improve readme text
