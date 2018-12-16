@@ -10,7 +10,6 @@ const {
 } = require("../customizations");
 
 function transformSettings(settings, configuration, disable) {
-  console.log({ type: configuration.type });
   let newSettings = {
     ...settings,
     "workbench.colorCustomizations": disable
