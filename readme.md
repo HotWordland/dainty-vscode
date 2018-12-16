@@ -4,11 +4,13 @@ Dainty is a color theme generator with support for Visual Studio Code. Dainty Li
 
 See https://dainty.site/vscode for more information.
 
-## Option 1 – Get it
+![Dainty Dark](vscode-dainty-dark.png)
 
-Dainty is available through the Visual Studio Marketplace. Search for “Dainty”.
+## Get Dainty through Visual Studio Marketplace
 
-## Option 2 – Build it
+Get pre-built presets through the Visual Studio Marketplace. Search for “Dainty”.
+
+## Configure and build Dainty
 
 ### Setup
 
