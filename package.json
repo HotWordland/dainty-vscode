@@ -1,9 +1,144 @@
 {
   "name": "dainty-vscode",
+  "displayName": "Dainty",
+  "description": "Dainty and improved versions of popular VS Code themes",
+  "version": "0.1.1",
+  "publisher": "alexanderte",
+  "engines": {
+    "vscode": "^1.30.0"
+  },
   "scripts": {
-    "build": "node src/index.js"
+    "build": "node src/index.js",
+    "vscode:prepublish": "node src/prepublish.js",
+    "publish": "vsce publish --yarn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexanderte/dainty-vscode"
+  },
+  "icon": "material-design-color-lens.png",
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "scheme",
+    "color",
+    "dainty",
+    "dark",
+    "light"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Dainty – Ayu Mirage",
+        "uiTheme": "vs-dark",
+        "path": "./dist/ayu-mirage.json"
+      },
+      {
+        "label": "Dainty – Cobalt2",
+        "uiTheme": "vs-dark",
+        "path": "./dist/cobalt2.json"
+      },
+      {
+        "label": "Dainty Dark Minimal",
+        "uiTheme": "vs-dark",
+        "path": "./dist/dainty-dark-minimal.json"
+      },
+      {
+        "label": "Dainty Dark",
+        "uiTheme": "vs-dark",
+        "path": "./dist/dainty-dark.json"
+      },
+      {
+        "label": "Dainty Light",
+        "uiTheme": "vs",
+        "path": "./dist/dainty-light.json"
+      },
+      {
+        "label": "Dainty – Dark+",
+        "uiTheme": "vs-dark",
+        "path": "./dist/dark-plus.json"
+      },
+      {
+        "label": "Dainty – Dracula",
+        "uiTheme": "vs-dark",
+        "path": "./dist/dracula.json"
+      },
+      {
+        "label": "Dainty – Fluent",
+        "uiTheme": "vs-dark",
+        "path": "./dist/fluent.json"
+      },
+      {
+        "label": "Dainty – Material Theme Ocean",
+        "uiTheme": "vs-dark",
+        "path": "./dist/material-theme-ocean.json"
+      },
+      {
+        "label": "Dainty – Material Theme Palenight",
+        "uiTheme": "vs-dark",
+        "path": "./dist/material-theme-palenight.json"
+      },
+      {
+        "label": "Dainty – Material Theme",
+        "uiTheme": "vs-dark",
+        "path": "./dist/material-theme.json"
+      },
+      {
+        "label": "Dainty – Minimal",
+        "uiTheme": "vs-dark",
+        "path": "./dist/minimal.json"
+      },
+      {
+        "label": "Dainty – Monokai Night",
+        "uiTheme": "vs-dark",
+        "path": "./dist/monokai-night.json"
+      },
+      {
+        "label": "Dainty – Monokai",
+        "uiTheme": "vs-dark",
+        "path": "./dist/monokai.json"
+      },
+      {
+        "label": "Dainty – Night Owl",
+        "uiTheme": "vs-dark",
+        "path": "./dist/night-owl.json"
+      },
+      {
+        "label": "Dainty – Oceanic Next",
+        "uiTheme": "vs-dark",
+        "path": "./dist/oceanic-next.json"
+      },
+      {
+        "label": "Dainty – One Dark Pro",
+        "uiTheme": "vs-dark",
+        "path": "./dist/one-dark-pro.json"
+      },
+      {
+        "label": "Dainty – Prettier",
+        "uiTheme": "vs-dark",
+        "path": "./dist/prettier.json"
+      },
+      {
+        "label": "Dainty – Purple Haze",
+        "uiTheme": "vs-dark",
+        "path": "./dist/purple-haze.json"
+      },
+      {
+        "label": "Dainty – Snazzy Theme",
+        "uiTheme": "vs-dark",
+        "path": "./dist/snazzy-theme.json"
+      },
+      {
+        "label": "Dainty – Tomorrow Night Eighties",
+        "uiTheme": "vs-dark",
+        "path": "./dist/tomorrow-night-eighties.json"
+      }
+    ]
   },
   "dependencies": {
+    "change-case": "3.0.2",
     "dainty-shared": "3.0.0-f23f53b",
     "minimist": "1.2.0"
   }

@@ -1,0 +1,6 @@
+backup
+dist/settings.json
+node_modules
+src
+configuration-schema.json
+material-design-color-lens.svg
