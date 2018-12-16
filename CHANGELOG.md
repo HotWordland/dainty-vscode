@@ -3,7 +3,7 @@
 ## 0.1.2 – 2018-12-16
 
 - Improve readme text
-- Add screenshot
+- Add screenshots
 
 ## 0.1.1 – 2018-12-16
 

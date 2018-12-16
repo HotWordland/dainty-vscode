@@ -6,9 +6,33 @@ See https://dainty.site/vscode for more information.
 
 ![Dainty Dark](vscode-dainty-dark.png)
 
+![Dainty Light](vscode-dainty-light.png)
+
 ## Get Dainty through Visual Studio Marketplace
 
-Get pre-built presets through the Visual Studio Marketplace. Search for “Dainty”.
+Get pre-built presets through the Visual Studio Marketplace. Search for “Dainty”. The following presets are included:
+
+- Dainty Dark
+- Dainty Dark Minimal
+- Dainty Light
+- Ayu Mirage
+- Cobalt2
+- Dark+
+- Dracula
+- Fluent
+- Material Theme Ocean
+- Material Theme Palenight
+- Material Theme
+- Minimal
+- Monokai Night
+- Monokai
+- Night Owl
+- Oceanic Next
+- One Dark Pro
+- Prettier
+- Purple Haze
+- Snazzy Theme
+- Tomorrow Night Eighties
 
 ## Configure and build Dainty
 
