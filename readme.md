@@ -1,52 +1,60 @@
 # Dainty for Visual Studio Code
 
-Dainty is a color theme generator with support for Visual Studio Code. Dainty Light and Dainty Dark are the default presets. They’re balanced and refined color themes, using carefully selected colors within the Lab color space. Dainty also comes with popular themes as presets – such as Night Owl – or even things like the branding colors of Prettier.
+Dainty is a **color theme generator** with support for **Visual Studio Code**. It comes with default presets **Dainty Dark** and **Dainty Light** as well as **popular color themes** as its presets.
 
-See https://dainty.site/vscode for more information.
+## Features
 
-![Dainty Dark](vscode-dainty-dark.png)
+- Colors are processed, and can be adjusted, within the Lab color space
+- Punctuation marks are slightly dimmed
+- Workbench is less busy than in the default/original themes
 
-![Dainty Light](vscode-dainty-light.png)
+## Presets
 
-## Get Dainty through Visual Studio Marketplace
+### Dainty Dark (`dainty-dark`)
 
-Get pre-built presets through the Visual Studio Marketplace. Search for “Dainty”. The following presets are included:
+![Dainty Dark](assets/vscode-dainty-dark.png)
 
-- Dainty Dark
-- Dainty Dark Minimal
-- Dainty Light
-- Ayu Mirage
-- Cobalt2
-- Dark+
-- Dracula
-- Fluent
-- Material Theme Ocean
-- Material Theme Palenight
-- Material Theme
-- Minimal
-- Monokai Night
-- Monokai
-- Night Owl
-- Oceanic Next
-- One Dark Pro
-- Prettier
-- Purple Haze
-- Snazzy Theme
-- Tomorrow Night Eighties
+### Dainty Light (`dainty-dark`)
 
-## Configure and build Dainty
+![Dainty Light](assets/vscode-dainty-light.png)
 
-### Setup
+## All presets
+
+- Ayu Mirage (`ayu-mirage`)
+- Cobalt2 (`cobalt2`)
+- Dainty Dark Minimal (`dainty-dark-minimal`)
+- Dainty Dark (`dainty-dark`)
+- Dainty Light (`dainty-light`)
+- Dark+ (`dark-plus`)
+- Dracula (`dracula`)
+- Fluent (`fluent`)
+- Material Theme Ocean (`material-theme-ocean`)
+- Material Theme Palenight (`material-theme-palenight`)
+- Material Theme (`material-theme`)
+- Minimal (`minimal`)
+- Monokai Night (`monokai-night`)
+- Monokai (`monokai`)
+- Night Owl (`night-owl`)
+- Oceanic Next (`oceanic-next`)
+- One Dark Pro (`one-dark-pro`)
+- Prettier (`prettier`)
+- Purple Haze (`purple-haze`)
+- Snazzy Theme (`snazzy-theme`)
+- Tomorrow Night Eighties (`tomorrow-night-eighties`)
+
+## Get it
+
+The easiest way to get Dainty is to install it through **Extensions in Visual Studio Code**. Search for “dainty”.
+
+## Build it
 
     git clone https://github.com/alexanderte/dainty-vscode.git
     cd dainty-vscode
     yarn
 
-### Build and install
+### Install theme into your `settings.json`
 
-    yarn build -i
-
-The `build` script, when run with `-i` or `--install` sets objects `workbench.colorCustomizations` and `editor.tokenColorCustomizations` in your `settings.json` to Dainty.
+    yarn build -i -p dainty-dark
 
 ### Configuration
 
