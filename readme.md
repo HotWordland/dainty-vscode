@@ -14,7 +14,7 @@ Dainty is a **color theme generator** with support for **Visual Studio Code**. I
 
 ![Dainty Dark](assets/vscode-dainty-dark.png)
 
-### Dainty Light (`dainty-dark`)
+### Dainty Light (`dainty-light`)
 
 ![Dainty Light](assets/vscode-dainty-light.png)
 
