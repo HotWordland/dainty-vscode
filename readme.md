@@ -18,26 +18,42 @@ Dainty is a **color theme generator** with support for **Visual Studio Code**. I
 
 ![Dainty Light](assets/vscode-dainty-light.png)
 
-## All presets
+### Cobalt2 (`cobalt2`)
+
+![Cobalt2](assets/vscode-cobalt2.png)
+
+### Dracula (`dracula`)
+
+![Dracula](assets/vscode-dracula.png)
+
+### Night Owl (`night-owl`)
+
+![Night Owl](assets/vscode-night-owl.png)
+
+### One Dark Pro (`one-dark-pro`)
+
+![One Dark Pro](assets/vscode-one-dark-pro.png)
+
+### Palenight (`palenight`)
+
+![Palenight](assets/vscode-palenight.png)
+
+### Prettier (`prettier`)
+
+![Prettier](assets/vscode-prettier.png)
+
+## Additional presets
 
 - Ayu Mirage (`ayu-mirage`)
-- Cobalt2 (`cobalt2`)
 - Dainty Dark Minimal (`dainty-dark-minimal`)
-- Dainty Dark (`dainty-dark`)
-- Dainty Light (`dainty-light`)
 - Dark+ (`dark-plus`)
-- Dracula (`dracula`)
 - Fluent (`fluent`)
 - Material Theme Ocean (`material-theme-ocean`)
-- Material Theme Palenight (`material-theme-palenight`)
 - Material Theme (`material-theme`)
 - Minimal (`minimal`)
 - Monokai Night (`monokai-night`)
 - Monokai (`monokai`)
-- Night Owl (`night-owl`)
 - Oceanic Next (`oceanic-next`)
-- One Dark Pro (`one-dark-pro`)
-- Prettier (`prettier`)
 - Purple Haze (`purple-haze`)
 - Snazzy Theme (`snazzy-theme`)
 - Tomorrow Night Eighties (`tomorrow-night-eighties`)
