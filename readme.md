@@ -34,9 +34,9 @@ Dainty is a **color theme generator** with support for **Visual Studio Code**. I
 
 ![One Dark Pro](assets/vscode-one-dark-pro.png)
 
-### Palenight (`palenight`)
+### Material Theme Palenight (`palenight`)
 
-![Palenight](assets/vscode-palenight.png)
+![Material Theme Palenight](assets/vscode-material-theme-palenight.png)
 
 ### Prettier (`prettier`)
 
