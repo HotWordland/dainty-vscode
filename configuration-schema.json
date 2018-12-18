@@ -1,3 +1,17 @@
 {
-  "$id": "https://dainty.site/vscode/configuration-schema.json"
+  "$id": "https://dainty.site/vscode/configuration-schema.json",
+  "properties": {
+    "customizations": {
+      "properties": {
+        "__colors": {
+          "$id": "#/properties/customizations/properties/__colors",
+          "type": "object"
+        },
+        "__tokenColors": {
+          "$id": "#/properties/customizations/properties/__tokenColors",
+          "type": "array"
+        }
+      }
+    }
+  }
 }

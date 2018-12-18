@@ -76,6 +76,24 @@ The easiest way to get Dainty is to install it through **Extensions in Visual St
 
 See https://dainty.site/configuration for more information.
 
+#### VS Code-specific customization
+
+It is possible to tap into the customization done by Dainty through the objects `__colors` and `__tokenColors`.
+
+    {
+      "customizations": {
+        "__colors": {
+          "activityBar.background": "neutral-2"
+        },
+        "__tokenColors": [
+          {
+            "scope": ["string"],
+            "foreground": "blue-14"
+          }
+        ]
+      }
+    }
+
 ## License
 
 Dainty is licensed under the [MIT License](https://github.com/alexanderte/dainty-vscode/blob/master/license.md).
