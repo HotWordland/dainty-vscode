@@ -76,7 +76,7 @@ The easiest way to get Dainty is to install it through **Extensions in Visual St
 
 See https://dainty.site/configuration for more information.
 
-#### VS Code-specific customization
+#### VS Code-specific customizations
 
 It is possible to tap into the customization done by Dainty through the objects `__colors` and `__tokenColors`.
 
