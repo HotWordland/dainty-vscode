@@ -78,7 +78,7 @@ See https://dainty.site/configuration for more information.
 
 #### VS Code-specific customizations
 
-It is possible to tap into the customization done by Dainty through the objects `__colors` and `__tokenColors`.
+It is possible to tap into the customizations done by Dainty through the objects `__colors` and `__tokenColors`.
 
     {
       "customizations": {
