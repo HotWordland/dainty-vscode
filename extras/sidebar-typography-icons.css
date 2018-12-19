@@ -1,0 +1,49 @@
+/* Disable sidebar arrows */
+
+.part.sidebar .monaco-tree-row > .content::before {
+  display: none;
+}
+
+/* Replace sidebar folder icons with ‘›’ */
+
+.part.sidebar .monaco-icon-label.folder-icon::before {
+  opacity: 0.4375;
+  background-image: none !important;
+  content: "›" !important;
+  font-size: 150%;
+  top: -1.25px !important;
+  width: auto !important;
+}
+
+/* Replace sidebar file icon with ‘–’ */
+
+.part.sidebar .monaco-icon-label.file-icon::before {
+  opacity: 0.4375;
+  background-image: none !important;
+  content: "–" !important;
+  top: 0 !important;
+  width: auto !important;
+}
+
+/* Fine-tune placement of ‘›’ and ‘–’ */
+
+.monaco-icon-label::before {
+  position: relative;
+  top: 1px;
+}
+
+/* Rotate  ‘›’ when folder is expanded */
+
+.part.sidebar
+  .monaco-tree-row.expanded
+  > div
+  > .monaco-icon-label.folder-icon::before {
+  transform: rotate(90deg) translate(5.75px, 0);
+}
+
+/* Rotate  ‘›’ when folder is expanded */
+
+.tab .monaco-icon-label {
+  justify-content: center;
+  padding: 0 16px !important;
+}

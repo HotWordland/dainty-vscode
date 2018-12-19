@@ -1,0 +1,29 @@
+.tab-close {
+  opacity: 0.375;
+}
+
+.tab-close:hover {
+  opacity: 0.75;
+}
+
+.tab {
+  top: -1.5px;
+}
+
+.close-editor-action {
+  background: none !important;
+}
+
+.close-editor-action:before {
+  position: relative;
+  top: -0.5px;
+  left: -8px;
+}
+
+.tab:not(.dirty) .close-editor-action:before {
+  content: "✕";
+}
+
+.tab.dirty .close-editor-action:before {
+  content: "⬤";
+}

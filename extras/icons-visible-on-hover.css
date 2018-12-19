@@ -1,0 +1,42 @@
+/* Make sidebar Explorer icons visible only on hover */
+
+.monaco-workbench > .part > .composite.title > .title-actions {
+  opacity: 0;
+  transition: opacity 0.1875s ease;
+}
+
+.monaco-workbench > .part > .composite.title > .title-actions:hover {
+  opacity: 1;
+}
+
+/* Make tab bar and panel icons visible only on hover */
+
+.monaco-workbench
+  > .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .editor-actions {
+  opacity: 0;
+  transition: opacity 0.1875s ease;
+}
+
+.monaco-workbench
+  > .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .editor-actions:hover {
+  opacity: 1;
+}
+
+/* Make bottom left manage icon visible only on hover */
+
+.global-activity {
+  opacity: 0;
+}
+
+.global-activity:hover {
+  transition: opacity 0.1875s ease;
+  opacity: 1;
+}

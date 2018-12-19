@@ -1,0 +1,6 @@
+/* Add a tiny bit of padding to list item */
+
+.monaco-tree-row {
+  padding: 1px 0 1px 24px;
+  height: calc(22px + 1px + 1px) !important;
+}
