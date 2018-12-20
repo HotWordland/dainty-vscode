@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4 – 2018-12-20
+
+- Update after Bézier curve adjustment change in `dainty-shared`
+
 ## 1.0.3 – 2018-12-18
 
 - Update after Bézier curve adjustment change in `dainty-shared`
