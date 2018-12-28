@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.5 – 2018-12-28
+
+- Update after saturation change in `dainty-shared` for Dainty presets
+
 ## 1.0.4 – 2018-12-20
 
 - Update after Bézier curve adjustment change in `dainty-shared`
