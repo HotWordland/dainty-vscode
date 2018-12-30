@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.7 – 2018-12-29
+
+- Fix chroma and chroma end adjustments for Dainty presets
+
+## 1.0.6 – 2018-12-29
+
+- Improve Dainty Light
+
 ## 1.0.5 – 2018-12-28
 
 - Update after saturation change in `dainty-shared` for Dainty presets
