@@ -2,7 +2,7 @@
   "name": "dainty-vscode",
   "displayName": "Dainty",
   "description": "Dainty themes, and improved versions of popular VS Code themes",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "publisher": "alexanderte",
   "engines": {
     "vscode": "^1.30.0"

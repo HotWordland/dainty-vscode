@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.8 – 2018-12-31
+
+- Refine Dainty Dark presets
+
 ## 1.0.7 – 2018-12-29
 
 - Fix chroma and chroma end adjustments for Dainty presets
