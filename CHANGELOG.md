@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.11 – 2019-01-13
+
+- Update list of themes
+
 ## 1.0.10 – 2019-01-13
 
 - Add Timbre

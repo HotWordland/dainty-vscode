@@ -2,7 +2,7 @@
   "name": "dainty-vscode",
   "displayName": "Dainty",
   "description": "Dainty themes, and improved versions of popular VS Code themes",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "publisher": "alexanderte",
   "engines": {
     "vscode": "^1.30.0"
@@ -39,11 +39,6 @@
         "label": "Dainty – Cobalt2",
         "uiTheme": "vs-dark",
         "path": "./dist/cobalt2.json"
-      },
-      {
-        "label": "Dainty Dark Minimal",
-        "uiTheme": "vs-dark",
-        "path": "./dist/dainty-dark-minimal.json"
       },
       {
         "label": "Dainty Dark",
@@ -129,6 +124,11 @@
         "label": "Dainty – Snazzy Theme",
         "uiTheme": "vs-dark",
         "path": "./dist/snazzy-theme.json"
+      },
+      {
+        "label": "Dainty – Timbre",
+        "uiTheme": "vs-dark",
+        "path": "./dist/timbre.json"
       },
       {
         "label": "Dainty – Tomorrow Night Eighties",
