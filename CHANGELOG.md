@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.10 – 2019-01-13
+
+- Add Timbre
+
 ## 1.0.9 – 2019-01-13
 
 - Refine Dainty Dark
