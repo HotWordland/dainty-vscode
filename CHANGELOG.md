@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.9 – 2019-01-13
+
+- Refine Dainty Dark
+- Remove Dainty Dark Minimal
+
 ## 1.0.8 – 2018-12-31
 
 - Refine Dainty Dark presets
