@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.14 – 2019-01-15
+
+- Update Timbre
+
+## 1.0.13 – 2019-01-15
+
+- Update Timbre
+
 ## 1.0.12 – 2019-01-15
 
 - Update Timbre
