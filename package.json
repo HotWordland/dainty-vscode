@@ -2,7 +2,7 @@
   "name": "dainty-vscode",
   "displayName": "Dainty",
   "description": "Dainty themes, and improved versions of popular VS Code themes",
-  "version": "1.0.14",
+  "version": "1.1.0",
   "publisher": "alexanderte",
   "engines": {
     "vscode": "^1.30.0"
@@ -30,6 +30,16 @@
   ],
   "contributes": {
     "themes": [
+      {
+        "label": "Dainty – Ardent",
+        "uiTheme": "vs-dark",
+        "path": "./dist/ardent.json"
+      },
+      {
+        "label": "Dainty – Ardent (less chroma)",
+        "uiTheme": "vs-dark",
+        "path": "./dist/ardent-less-chroma.json"
+      },
       {
         "label": "Dainty – Ayu Mirage",
         "uiTheme": "vs-dark",
@@ -109,6 +119,11 @@
         "label": "Dainty – One Dark Pro",
         "uiTheme": "vs-dark",
         "path": "./dist/one-dark-pro.json"
+      },
+      {
+        "label": "Dainty – Pivot",
+        "uiTheme": "vs-dark",
+        "path": "./dist/pivot.json"
       },
       {
         "label": "Dainty – Prettier",

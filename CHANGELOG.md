@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.0 – 2019-01-17
+
+- Add Ardent and Pivot
+- Update Timbre
+
 ## 1.0.14 – 2019-01-15
 
 - Update Timbre
