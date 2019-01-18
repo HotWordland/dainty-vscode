@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1 – 2019-01-18
+
+- Add Ardent (darker)
+- Add Ardent (darker, less chroma)
+
 ## 1.1.0 – 2019-01-17
 
 - Add Ardent and Pivot
