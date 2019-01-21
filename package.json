@@ -36,21 +36,6 @@
         "path": "./dist/ardent.json"
       },
       {
-        "label": "Dainty – Ardent (darker)",
-        "uiTheme": "vs-dark",
-        "path": "./dist/ardent-darker.json"
-      },
-      {
-        "label": "Dainty – Ardent (darker, less chroma)",
-        "uiTheme": "vs-dark",
-        "path": "./dist/ardent-darker-less-chroma.json"
-      },
-      {
-        "label": "Dainty – Ardent (less chroma)",
-        "uiTheme": "vs-dark",
-        "path": "./dist/ardent-less-chroma.json"
-      },
-      {
         "label": "Dainty – Ayu Mirage",
         "uiTheme": "vs-dark",
         "path": "./dist/ayu-mirage.json"
@@ -131,6 +116,11 @@
         "path": "./dist/one-dark-pro.json"
       },
       {
+        "label": "Dainty – Panda Theme",
+        "uiTheme": "vs-dark",
+        "path": "./dist/panda-theme.json"
+      },
+      {
         "label": "Dainty – Pivot",
         "uiTheme": "vs-dark",
         "path": "./dist/pivot.json"
@@ -151,14 +141,14 @@
         "path": "./dist/snazzy-theme.json"
       },
       {
-        "label": "Dainty – Timbre",
-        "uiTheme": "vs-dark",
-        "path": "./dist/timbre.json"
-      },
-      {
         "label": "Dainty – Timbre (less chroma)",
         "uiTheme": "vs-dark",
         "path": "./dist/timbre-less-chroma.json"
+      },
+      {
+        "label": "Dainty – Timbre",
+        "uiTheme": "vs-dark",
+        "path": "./dist/timbre.json"
       },
       {
         "label": "Dainty – Tomorrow Night Eighties",
