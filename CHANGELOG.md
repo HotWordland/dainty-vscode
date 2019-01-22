@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.3 – 2019-01-22
+
+- Add Andromeda and Mirage
+
+## 1.1.2 – 2019-01-21
+
+- Add Panda Theme
+- Remove Ardent (darker)
+- Remove Ardent (darker, less chroma)
+
 ## 1.1.1 – 2019-01-18
 
 - Add Ardent (darker)
