@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.7 – 2019-01-23
+
+- Update keywords and list of additional presets
+
 ## 1.1.6 – 2019-01-23
 
 - Replace readme logo with smaller one

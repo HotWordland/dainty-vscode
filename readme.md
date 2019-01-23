@@ -46,18 +46,26 @@ Dainty is a **color theme generator** with support for **Visual Studio Code**. I
 
 ## Additional presets
 
+- Andromeda (`andromeda`)
+- Ardent (`ardent`)
 - Ayu Mirage (`ayu-mirage`)
-- Dainty Dark Minimal (`dainty-dark-minimal`)
+- City Lights (`city-lights`)
 - Dark+ (`dark-plus`)
 - Fluent (`fluent`)
 - Material Theme Ocean (`material-theme-ocean`)
 - Material Theme (`material-theme`)
 - Minimal (`minimal`)
+- Mirage (`mirage`)
 - Monokai Night (`monokai-night`)
 - Monokai (`monokai`)
+- Nord (`nord`)
 - Oceanic Next (`oceanic-next`)
+- Panda Theme (`panda-theme`)
+- Pivot (`pivot`)
 - Purple Haze (`purple-haze`)
 - Snazzy Theme (`snazzy-theme`)
+- Timbre (less chroma) (`timbre-less-chroma`)
+- Timbre (`timbre`)
 - Tomorrow Night Eighties (`tomorrow-night-eighties`)
 
 ## Get it
