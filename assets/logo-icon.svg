@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 338.66666 338.66666"
+   height="1280"
+   width="1280">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="SvgjsLinearGradient18097">
+      <stop
+         id="SvgjsStop18098"
+         stop-color="#6d7cff"
+         offset="0" />
+      <stop
+         id="SvgjsStop18099"
+         stop-color="#ff51ff"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="7.8899179"
+       x2="72.497589"
+       y1="7.8899179"
+       x1="16.730211"
+       gradientTransform="scale(0.89658158,1.1153475)"
+       id="linearGradient3764"
+       xlink:href="#SvgjsLinearGradient18097" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="59.92868"
+       x2="42.853199"
+       y1="59.92868"
+       x1="16.288361"
+       gradientTransform="scale(1.3506577,0.74038006)"
+       id="linearGradient3766"
+       xlink:href="#SvgjsLinearGradient18097" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="7.8899179"
+       x2="72.497589"
+       y1="7.8899179"
+       x1="16.730211"
+       gradientTransform="scale(0.89658158,1.1153475)"
+       id="linearGradient3768"
+       xlink:href="#SvgjsLinearGradient18097" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="7.8899179"
+       x2="72.497589"
+       y1="7.8899179"
+       x1="16.730211"
+       gradientTransform="scale(0.89658158,1.1153475)"
+       id="linearGradient3770"
+       xlink:href="#SvgjsLinearGradient18097" />
+    <defs
+       id="SvgjsDefs18092">
+      <linearGradient
+         id="linearGradient3750">
+        <stop
+           offset="0"
+           stop-color="#6d7cff"
+           id="stop3746" />
+        <stop
+           offset="1"
+           stop-color="#ff51ff"
+           id="stop3748" />
+      </linearGradient>
+    </defs>
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,41.666657)"
+     id="layer1">
+    <g
+       transform="matrix(3.1498016,0,0,3.1498016,-306.03469,-110.36248)"
+       featureKey="root"
+       id="SvgjsG18093"
+       style="fill:#ffffff" />
+    <g
+       transform="matrix(4.4097222,0,0,4.4097222,-7.0555547,-48.281239)"
+       featureKey="symbol1"
+       id="SvgjsG18094"
+       style="fill:url(#linearGradient3770)">
+      <title
+         id="title3718">42_android_color_settings_2</title>
+      <g
+         id="g3724"
+         data-name="Layer 3"
+         style="fill:url(#linearGradient3768)">
+        <path
+           id="path3720"
+           d="m 45.86,15 a 53.15,53.15 0 0 1 -4.3,-4.26 L 40,8.8 l -1.56,2 A 52.86,52.86 0 0 1 34.15,15 C 27,21.69 15,32.87 15,46 a 25,25 0 0 0 50,0 C 65,32.87 53,21.69 45.86,15 Z M 40,67 A 21,21 0 0 1 19,46 c 0,-11.4 11.19,-21.83 17.87,-28.07 1.2,-1.12 2.26,-2.11 3.13,-3 0.87,0.87 1.93,1.86 3.13,3 C 49.81,24.17 61,34.61 61,46 A 21,21 0 0 1 40,67 Z"
+           style="fill:url(#linearGradient3764)" />
+        <path
+           id="path3722"
+           d="m 30.08,44.37 h -0.61 a 21.79,21.79 0 0 0 -7.47,2.09 18,18 0 0 0 35.88,1.61 50.32,50.32 0 0 1 -8,1 h -0.4 c -4.18,0 -7.94,-1.41 -11.26,-2.66 -2.88,-1.02 -5.58,-2.04 -8.14,-2.04 z"
+           style="fill:url(#linearGradient3766)" />
+      </g>
+    </g>
+  </g>
+</svg>

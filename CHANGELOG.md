@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.4 – 2019-01-23
+
+- Add new logo
+- Add City Lights and Nord
+
 ## 1.1.3 – 2019-01-22
 
 - Add Andromeda and Mirage
