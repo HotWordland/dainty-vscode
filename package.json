@@ -46,6 +46,11 @@
         "path": "./dist/ayu-mirage.json"
       },
       {
+        "label": "Dainty – City Lights",
+        "uiTheme": "vs-dark",
+        "path": "./dist/city-lights.json"
+      },
+      {
         "label": "Dainty – Cobalt2",
         "uiTheme": "vs-dark",
         "path": "./dist/cobalt2.json"
@@ -114,6 +119,11 @@
         "label": "Dainty – Night Owl",
         "uiTheme": "vs-dark",
         "path": "./dist/night-owl.json"
+      },
+      {
+        "label": "Dainty – Nord",
+        "uiTheme": "vs-dark",
+        "path": "./dist/nord.json"
       },
       {
         "label": "Dainty – Oceanic Next",
