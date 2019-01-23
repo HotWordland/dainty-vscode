@@ -1,5 +1,7 @@
 # Dainty for Visual Studio Code
 
+![Dainty logo](assets/logo.png)
+
 Dainty is a **color theme generator** with support for **Visual Studio Code**. It comes with default presets **Dainty Dark** and **Dainty Light** as well as **popular color themes** as its presets.
 
 ## Features
