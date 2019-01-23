@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.6 – 2019-01-23
+
+- Replace readme logo with smaller one
+
 ## 1.1.5 – 2019-01-23
 
 - Add logo to readme
