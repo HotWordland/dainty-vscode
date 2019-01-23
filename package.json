@@ -169,7 +169,7 @@
   },
   "dependencies": {
     "change-case": "3.0.2",
-    "dainty-shared": "3.1.0-2c2ad32",
+    "dainty-shared": "3.1.0-76193f7",
     "minimist": "1.2.0"
   }
 }
