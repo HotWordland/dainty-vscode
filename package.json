@@ -1,8 +1,8 @@
 {
   "name": "dainty-vscode",
   "displayName": "Dainty",
-  "description": "Improved versions of popular VS Code themes",
-  "version": "1.1.7",
+  "description": "Streamlined versions of popular VS Code themes",
+  "version": "1.1.8",
   "publisher": "alexanderte",
   "engines": {
     "vscode": "^1.30.0"

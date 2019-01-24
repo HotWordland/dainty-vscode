@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.8 – 2019-01-24
+
+- Update description
+
 ## 1.1.7 – 2019-01-23
 
 - Update keywords and list of additional presets
