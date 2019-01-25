@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.11 – 2019-01-25
+
+- Style gallery banner
+
 ## 1.1.10 – 2019-01-25
 
 - Add badges to readme

@@ -2,7 +2,7 @@
   "name": "dainty-vscode",
   "displayName": "Dainty",
   "description": "Streamlined versions of popular VS Code themes",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "publisher": "alexanderte",
   "engines": {
     "vscode": "^1.30.0"
@@ -20,6 +20,10 @@
   "categories": [
     "Themes"
   ],
+  "galleryBanner": {
+    "color": "#1a1144",
+    "theme": "dark"
+  },
   "keywords": [
     "theme",
     "scheme",
