@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.10 – 2019-01-25
+
+- Add badges to readme
+
 ## 1.1.9 – 2019-01-25
 
 - Remove logo from readme
