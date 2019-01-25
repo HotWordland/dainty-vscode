@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.12 – 2019-01-25
+
+- Improve One Dark Pro
+- Refine gallery banner background color
+
 ## 1.1.11 – 2019-01-25
 
 - Style gallery banner
