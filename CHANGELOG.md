@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.9 – 2019-01-25
+
+- Remove logo from readme
+
 ## 1.1.8 – 2019-01-24
 
 - Update description
