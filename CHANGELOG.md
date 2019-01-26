@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.16 – 2019-01-26
+
+- Change gallery banner background color
+
+## 1.1.15 – 2019-01-26
+
+- Refine Dainty Dark
+
 ## 1.1.14 – 2019-01-26
 
 - Do another attempt at updating Dainty Dark
