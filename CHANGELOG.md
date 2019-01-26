@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.14 – 2019-01-26
+
+- Do another attempt at updating Dainty Dark
+
 ## 1.1.13 – 2019-01-26
 
 - Desdesign Dainty Dark
