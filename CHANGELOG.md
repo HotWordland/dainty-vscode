@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.13 – 2019-01-26
+
+- Desdesign Dainty Dark
+- Update screenshots
+
 ## 1.1.12 – 2019-01-25
 
 - Improve One Dark Pro
