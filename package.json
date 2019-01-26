@@ -210,7 +210,7 @@
   },
   "dependencies": {
     "change-case": "3.0.2",
-    "dainty-shared": "3.1.0-9c1c6bc",
+    "dainty-shared": "3.1.0-681c870",
     "minimist": "1.2.0"
   }
 }
