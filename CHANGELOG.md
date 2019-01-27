@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.18 – 2019-01-27
+
+- Add Dark+ (2019 Remaster)
+
 ## 1.1.17 – 2019-01-27
 
 - Update readme description

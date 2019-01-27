@@ -2,7 +2,7 @@
   "name": "dainty-vscode",
   "displayName": "Dainty",
   "description": "Streamlined versions of popular VS Code themes",
-  "version": "1.1.17",
+  "version": "1.1.18",
   "publisher": "alexanderte",
   "engines": {
     "vscode": "^1.30.0"
@@ -95,6 +95,11 @@
         "label": "Dainty Light",
         "uiTheme": "vs",
         "path": "./dist/dainty-light.json"
+      },
+      {
+        "label": "Dainty – Dark+ (2019 Remaster)",
+        "uiTheme": "vs-dark",
+        "path": "./dist/dark-plus-2019-remaster.json"
       },
       {
         "label": "Dainty – Dark+",

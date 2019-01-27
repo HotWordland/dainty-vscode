@@ -47,6 +47,7 @@ Dainty keeps most of the token colors of the original themes, but the workbench 
 - Ayu Mirage (`ayu-mirage`)
 - City Lights (`city-lights`)
 - Dark+ (`dark-plus`)
+- Dark+ (2019 Remaster) (`dark-plus-2019-remaster`)
 - Fluent (`fluent`)
 - Material Theme Ocean (`material-theme-ocean`)
 - Material Theme (`material-theme`)
