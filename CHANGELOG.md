@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.19 – 2019-01-27
+
+- Rename “Dark+ (2019 Remaster)” to “Dark+ Reimagined”
+
 ## 1.1.18 – 2019-01-27
 
 - Add Dark+ (2019 Remaster)
