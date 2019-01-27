@@ -97,9 +97,9 @@
         "path": "./dist/dainty-light.json"
       },
       {
-        "label": "Dainty – Dark+ (2019 Remaster)",
+        "label": "Dainty – Dark+ Reimagined",
         "uiTheme": "vs-dark",
-        "path": "./dist/dark-plus-2019-remaster.json"
+        "path": "./dist/dark-plus-reimagined.json"
       },
       {
         "label": "Dainty – Dark+",
