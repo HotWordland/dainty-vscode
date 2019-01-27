@@ -4,11 +4,7 @@
 
 Dainty is a **color theme generator** with support for **Visual Studio Code**. It comes with default presets **Dainty Dark** and **Dainty Light** as well as **popular color themes** as its presets.
 
-## Features
-
-- Colors are processed, and can be adjusted, within the Lab color space
-- Punctuation marks are slightly dimmed
-- Workbench is less busy than in the default/original themes
+Dainty keeps most of the token colors of the original themes, but the workbench and UI elements such as selections and shadows are rebuilt for a **sleek and minimal appearance**.
 
 ## Presets
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.17 – 2019-01-27
+
+- Update readme description
+
 ## 1.1.16 – 2019-01-26
 
 - Change gallery banner background color
