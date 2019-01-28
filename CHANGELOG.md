@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.21 – 2019-01-28
+
+- Rename “Dark+ (2019 Remaster)” to “Dark+ Reimagined” in readme
+
 ## 1.1.20 – 2019-01-28
 
 - Improve support for TypeScript and other languages
