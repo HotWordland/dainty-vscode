@@ -965,7 +965,12 @@ function getTokenCustomizations(getProperty) {
       }
     },
     {
-      scope: ["meta.brace.round.js", "meta.brace.square.js", "punctuation"],
+      scope: [
+        "meta.brace.round",
+        "meta.brace.square",
+        "meta.brace.angle",
+        "punctuation"
+      ],
       settings: {
         foreground: getProperty("token.punctuation")
       }
@@ -1004,11 +1009,7 @@ function getTokenCustomizations(getProperty) {
     },
     {
       scope: [
-        "punctuation.definition.comment.python",
-        "punctuation.definition.comment.js",
-        "punctuation.definition.comment.cpp",
-        "punctuation.definition.comment.begin.css",
-        "punctuation.definition.comment.end.css",
+        "punctuation.definition.comment",
         "punctuation.definition.list.begin.markdown"
       ],
       settings: {
