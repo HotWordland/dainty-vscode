@@ -117,13 +117,13 @@ function getWorkbenchCustomizations(
     "editorGroup.dropBackground": getColor("neutral", getTypeShade(0)),
     "editorGroupHeader.noTabsBackground": getColor("neutral", getTypeShade(0)),
     "editorGroupHeader.tabsBackground": getColor("neutral", getTypeShade(1)),
-    "editorGutter.addedBackground": getColor("green", getTypeShade(3)),
+    "editorGutter.addedBackground": getColor("green", getTypeShade(7)),
     "editorGutter.background": getColor("neutral", getTypeShade(0)),
     "editorGutter.commentRangeForeground": "#c5c5c5",
-    "editorGutter.deletedBackground": getColor("red", getTypeShade(3)),
+    "editorGutter.deletedBackground": getColor("red", getTypeShade(7)),
     "editorGutter.modifiedBackground": getColor(
       "blueLessChroma",
-      getTypeShade(3)
+      getTypeShade(7)
     ),
     "editorHint.foreground": "#eeeeeeb3",
     "editorHoverWidget.background": getColor("neutral", getTypeShade(1)),
