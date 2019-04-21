@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.22 – 2019-04-21
+
+- Increase visibility of added, deleted, and modified indicators
+
 ## 1.1.21 – 2019-01-28
 
 - Rename “Dark+ (2019 Remaster)” to “Dark+ Reimagined” in readme
